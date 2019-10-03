@@ -1,11 +1,13 @@
 <link rel="stylesheet" href="../assets/css/solicitud.css">
 <div class="container-fluid">
   <div class="row">
-    <div class="col-md-3 col-sm-3 col-xs-12 ss">
+    <!--parte izquierda de la pagina correspondiente a las opciones de equipos a disposicion-->
+    <div class="col-md-3 col-sm-3 col-xs-12 ss bg-lp">
       <div class="col-sol-1">
         <p>Equipos</p>
       </div>
     </div>
+    <!--Parte derecha de la pagina correspondiente al formulario-->
     <div class="col-md-9 col-sm-9 col-xs-12 ss">
       <div class="col-sol-2">
         <h3 class="header">Solicitud de Soporte</h3>

@@ -1,5 +1,5 @@
   <link rel="stylesheet" href="../assets/css/nav-style.css">
-  <nav class="navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-dark" style="background-color:#16253d;">
     <!-- Brand -->
     <div class="btn-links">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">

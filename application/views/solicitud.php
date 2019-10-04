@@ -76,10 +76,15 @@
               <label for="HOST">HOST</label>
               <input id="HOST" class="form-control" type="text" name="host" placeholder="HOST">
             </div>
-            <div class="col-md-4 mb-4">
+            <div class="col-md-3 mb-4">
               <label for="E-S">¿Dispositivo E/S?</label><br>
-              <input id="E-S" type="radio" name="e-s" value="Si">Sí
-              <input id="E-S" type="radio" name="e-s" value="No">No
+              <input id="E-S" class="sol-btns" type="radio" name="e-s" value="Si">Sí
+              <input id="E-S" class="sol-btns" type="radio" name="e-s" value="No">No
+            </div>
+            <div class="col-md-3 mb-4">
+              <label for="Urgente">¿Es urgente?</label><br>
+              <input id="Urgente" class="sol-btns" type="radio" name="urgente" value="Sí">Sí
+              <input id="Urgente" class="sol-btns" type="radio" name="urgente" value="No">No
             </div>
           </div>
           <div class="row">
@@ -87,6 +92,9 @@
               <label for="Problema">¿Cuál es el problema?</label>
               <textarea id="Problema" class="form-control" rows="3" name="problema"></textarea>
             </div>
+          </div>
+          <div class="row">
+            <button type="submit" class="btn btn-primary bg-success mb-4">Solicitar</button>
           </div>
         </form>
       </div>

@@ -1,0 +1,29 @@
+.cont-style{
+  padding: 5% 10% 5% 10%;
+}
+ .titulo-hms{
+   text-align: center;
+   text-decoration: inherit;
+   font-style: italic;
+ }
+
+.atributo-sht{
+  width: 5%
+}
+
+.atributo{
+  width: 15%;
+}
+
+.atrib-stl{
+  text-align: center;
+  font-family: fantasy;
+}
+
+.atrib-ext{
+  text-align: left;
+}
+
+table tr td{
+  text-align: center;
+}

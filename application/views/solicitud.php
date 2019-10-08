@@ -93,7 +93,7 @@
               <textarea id="Problema" class="form-control" rows="3" name="problema"></textarea>
             </div>
           </div>
-          <div class="row">
+          <div class="row my-btn-success mb-4">
             <button type="submit" class="btn btn-primary bg-success mb-4">Solicitar</button>
           </div>
         </form>

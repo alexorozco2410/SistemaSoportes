@@ -3,7 +3,7 @@
 <div class="container-fluid cont-style">
   <div class="row justify-content-center">
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <h3 class="titulo-hms mb-4">Historial personal</h3>
+      <h3 class="titulo-hms mb-5">Historial personal</h3>
       <div class="table-responsive">
         <table class="table hover-table">
           <tr>

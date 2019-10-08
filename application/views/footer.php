@@ -1,14 +1,15 @@
 <link rel="stylesheet" href="../assets/css/my_footer.css">
-    <footer class="footer-page font-small pt-5 my-footer ">
+    <footer class="page-footer footer-page font-small pt-5 my-footer ">
       <div class="container-fluid text-md-left">
-        <div class="row">
+        <div class="row align-items-center justify-content-around">
           <div class="col-md-6 mt-md-0 mt-3">
-            <h5 class="text-uppercase tit-footer">Contacto UC</h5>
-            <p>
-              Extensión:
-              
-            </p>
+            <h6 class="tit-footer">Universidad Nacional Autónoma de México</h6>
+            <h6 class="tit-footer" id="Facultad">Facultad de Ingeniería</h6>
+            <p> © 2019 Copyright</p>
           </div>
+        </div>
+        <div class="row">
+          <p>infor</p>
         </div>
       </div>
     </footer>

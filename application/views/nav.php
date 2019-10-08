@@ -17,10 +17,10 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="my-nav-list">
       <li class="my-nav-item">
-        <a class="my-nav-link" href="#">Solicitud</a>
+        <a class="my-nav-link" href="solicitud_controller">Solicitud</a>
       </li>
       <li class="my-nav-item">
-        <a class="my-nav-link" href="#">Mis Soportes</a>
+        <a class="my-nav-link" href="mis_soportes_controller">Mis Soportes</a>
       </li>
     </ul>
   </div>

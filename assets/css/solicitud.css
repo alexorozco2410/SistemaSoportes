@@ -15,6 +15,7 @@
 
 .ss{
   padding: 0;
+  attachment: fixed;
 }
 
 .header{
@@ -30,4 +31,14 @@
 #Problema{
   max-height: 100px;
   min-height: 100px;
+}
+
+.sol-soporte{
+  padding-bottom: 3%;
+  padding-top: 1%;
+}
+
+.my-btn-success{
+  float: right;
+  padding: 0% 2% 2% 2%;
 }

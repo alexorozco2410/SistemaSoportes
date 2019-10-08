@@ -1,7 +1,21 @@
 .my-footer{
   background-color: black;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
 }
 
 .tit-footer{
   color: white;
+  font-weight: bold;
+}
+
+#Facultad{
+  font-size: 1.3rem;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
 }

@@ -1,21 +1,36 @@
 .my-footer{
   background-color: black;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-
 }
 
 .tit-footer{
   color: white;
   font-weight: bold;
+  font-family: fantasy;
+  font-size: 110%;
 }
 
 #Facultad{
-  font-size: 1.3rem;
+  font-size: 1.4rem;
 }
 
 html {
   min-height: 100%;
   position: relative;
+}
+
+.inf-footer{
+  color: white;
+  text-align: left;
+  font-style: italic;
+  font-size: 90%;
+}
+
+.cont-footer{
+  max-width: 90%;
+}
+
+.cr-style{
+  color: white;
+  font-size: 80%;
+  font-style: oblique;
 }

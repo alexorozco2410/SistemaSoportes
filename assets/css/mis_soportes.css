@@ -14,7 +14,7 @@
 }
 
 .atributo{
-  width: 15%;
+  width: 13%;
 }
 
 .atrib-stl{
@@ -28,4 +28,13 @@
 
 table tr td{
   text-align: center;
+}
+
+.descprob{
+  padding: 0;
+}
+
+.page-container{
+  position: relative;
+  min-height: 70vh;
 }

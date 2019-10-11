@@ -1,5 +1,7 @@
 <link rel="stylesheet" href="../assets/css/my_footer.css">
-    <footer class="page-footer font-small pt-5 my-footer ">
+<!--botones-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <footer class="page-footer font-small my-footer ">
       <div class="container-fluid text-md-left cont-footer">
         <div class="row align-items-center justify-content-around">
           <div class="col-md-5 mt-md-0 mt-3">
@@ -11,18 +13,12 @@
             <p class="inf-footer">Circuito Exterior s/n Col. Ciudad Universitaria C.P.
               04510 Del. Coyoacán México D.F. 56228005 ext. 1037</p>
           </div>
-          <div class="col-md-2">
+          <div class="col-md-2" style="text-align:center;">
             <!-- Social buttons -->
-          <ul>
-            <li class="list-inline-item">
-              <a class="btn-floating btn-fb mx-1">
-                <i class="fab fa-facebook-f"> </i>
-              </a>
-            </li>
-          </ul>
+
           </div>
         </div>
-        <div class="row">
+        <div class="row justify-content-center">
           <p class="cr-style"> © 2019 Copyright</p>
         </div>
       </div>

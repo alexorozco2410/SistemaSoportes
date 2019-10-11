@@ -11,6 +11,8 @@ class Historial_controller extends CI_Controller {
 	{
 		$this->load->view('inicio');
     $this->load->view('nav');
+    $this->load->view('historial');
+    $this->load->view('footer');
     $this->load->view('final');
 	}
 }

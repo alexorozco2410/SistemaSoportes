@@ -38,3 +38,7 @@ table tr td{
   position: relative;
   min-height: 70vh;
 }
+
+table tbody tr:hover{
+  background-color: rgba(255, 0, 0, 0.3);
+}

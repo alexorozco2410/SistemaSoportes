@@ -2,3 +2,16 @@
   padding: 5% 2% 5% 2%;
   attachment: fixed;
 }
+
+.btn-avance{
+  background-color: red;
+  color: white;
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+.titulo-h{
+  text-align: center;
+  font-style: italic;
+  font-weight: bold;
+}

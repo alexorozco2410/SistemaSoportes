@@ -1,0 +1,13 @@
+.info-style{
+  padding: 3% 10% 3% 10%;
+  attachment: fixed;
+}
+
+.reg-prob{
+  height: 15vh;
+  overflow: auto;
+}
+
+.reg-prob::-webkit-scrollbar {
+    -webkit-appearance: none;
+}

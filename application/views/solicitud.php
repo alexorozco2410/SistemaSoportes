@@ -94,7 +94,7 @@
             </div>
           </div>
           <div class="row my-btn-success mb-4">
-            <button type="submit" class="btn btn-primary bg-success">Solicitar</button>
+            <button name="btn-solicitud" type="submit" class="btn btn-primary bg-success">Solicitar</button>
           </div>
         </form>
       </div>

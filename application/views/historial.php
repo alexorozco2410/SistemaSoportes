@@ -5,7 +5,7 @@
   <!--Titulo de la pagina-->
   <div class="row justify-content-center">
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <h3 class="titulo-h mb-4">Historial</h3>
+      <h3 class="titulo-h mb-4">Soportes</h3>
     </div>
   </div>
   <!--para filtrar por estado de soporte-->
@@ -27,27 +27,27 @@
       <div class="table-responsive">
         <table class="table ">
           <thead class="thead-dark">
-            <tr>
-              <th class="atr-hist">Folio</th>
-              <th class="atr-hist">Equipo</th>
-              <th class="atr-hist">Usuario</th>
-              <th class="atr-hist">Cubículo/Salón</th>
-              <th class="atr-hist">Integrante UC</th>
-              <th class="atr-hist">Fecha y Hora Inicio</th>
-              <th class="atr-hist">Fecha Y Hora Final</th>
-              <th class="atr-hist">Avance</th>
+            <tr class="atr-hist">
+              <th class="atr-lg">Folio</th>
+              <th class="atr-s">Equipo</th>
+              <th class="atr-lg">Usuario</th>
+              <th class="atr-s">Cubículo/Salón</th>
+              <th class="atr-lg">Integrante UC</th>
+              <th class="atr-s">Fecha Inicio</th>
+              <th class="atr-s">Fecha Final</th>
+              <th class="atr-m">Avance</th>
             </tr>
           </thead>
           <tbody>
             <tr onclick="location='solicitud_controller'">
-              <td>44444</td>
-              <td>44444</td>
-              <td>44444</td>
-              <td>44444</td>
-              <td>44444</td>
-              <td>44444</td>
-              <td>44444</td>
-              <td>44444</td>
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
             </tr>
           </tbody>
         </table>

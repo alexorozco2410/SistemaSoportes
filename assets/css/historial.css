@@ -15,3 +15,19 @@
   font-style: italic;
   font-weight: bold;
 }
+
+.atr-hist{
+  text-align: center;
+}
+
+.atr-m{
+  width: 12%;
+}
+
+.atr-s{
+  width: 9%;
+}
+
+.atr-lg{
+  width: 15%;
+}

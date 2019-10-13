@@ -3,11 +3,47 @@
   attachment: fixed;
 }
 
-.reg-prob{
-  height: 15vh;
+.reg-sol{
+  height: 10vh;
   overflow: auto;
 }
 
-.reg-prob::-webkit-scrollbar {
-    -webkit-appearance: none;
+.form-control{
+  text-align: left;
+  padding-left: 0;
+}
+
+.box-hist{
+  box-shadow: 10px 10px 20px;
+  margin-bottom: 2rem;
+  border-color: #06115d;
+}
+
+.card-body{
+  word-wrap: normal;
+}
+
+.subtit{
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.btn-end-sop{
+  text-align: right;
+}
+
+.sol-ovfw{
+  overflow: auto;
+}
+
+.tit-info-equipo{
+  text-align: center;
+}
+
+.box-info-equipo{
+  border-top-width: medium;
+  border-width: medium;
+    border-top-color: rgba(255, 0, 150, 0.5);
+    border-bottom-color:  rgba(255, 0, 150, 0.5);
 }

@@ -7,7 +7,7 @@
       </button>Enlaces
     </div>
 
-    <a class="navbar-brand" href="#">Sistema de Soportes</a>
+    <h5 class="navbar-brand">Sistema de Soportes</h5>
 
     <form class="form-inline" action="">
       <input class="form-control mr-sm-1" type="text" placeholder="Search">

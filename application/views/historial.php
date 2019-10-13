@@ -5,7 +5,7 @@
   <!--Titulo de la pagina-->
   <div class="row justify-content-center">
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <h3 class="titulo-h mb-4">Soportes</h3>
+      <h3 class="titulo-h mb-3">Soportes</h3>
     </div>
   </div>
   <!--para filtrar por estado de soporte-->
@@ -19,6 +19,15 @@
           <button type="button" class="btn btn-primary">En Proceso</button>
         </div>
       </label>
+    </div>
+    <div class="col-sm-5 col-md-5">
+
+    </div>
+    <div class=" col-sm-1 col-md-1">
+      <select class="form-control custom-select d-block select-semestre" name="semestre-soportes">
+        <option value="">2020-1</option>
+        <option value="">2020-2</option>
+      </select>
     </div>
   </div>
   <!--Tabla de historial de soportes-->
@@ -39,7 +48,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr onclick="location='solicitud_controller'">
+            <tr onclick="location='info_soportes_controller'">
               <td>SP/UC/168/2020-1</td>
               <td>Laptop</td>
               <td>xxx. Alexis Orozco</td>

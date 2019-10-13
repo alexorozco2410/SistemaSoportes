@@ -90,7 +90,7 @@
           <div class="row">
             <div class="col-md-12 mb-4">
               <label for="Problema">¿Cuál es el problema?</label>
-              <textarea id="Problema" class="form-control" rows="3" name="problema"></textarea>
+              <textarea id="Problema" class="form-control" rows="3" name="problema" placeholder="Describe el problema que tienes..." requiered></textarea>
             </div>
           </div>
           <div class="row my-btn-success mb-4">

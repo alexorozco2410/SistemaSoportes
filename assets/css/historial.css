@@ -1,5 +1,5 @@
 .tabh-style{
-  padding: 5% 2% 5% 2%;
+  padding: 3% 2% 5% 2%;
   attachment: fixed;
 }
 
@@ -30,4 +30,13 @@
 
 .atr-lg{
   width: 15%;
+}
+
+.ovf{
+  overflow: auto;
+}
+
+.select-semestre{
+    border-width: thin;
+    border-color: blue;
 }

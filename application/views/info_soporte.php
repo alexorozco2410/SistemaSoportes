@@ -73,8 +73,8 @@
                   <p>Departamento</p>
                   <p class="form-control">iMAGENOLOGIA</p>
                 </div>
-                <div class="col-1">
-                  <p>Cubículo</p>
+                <div class="col-2">
+                  <p>Cubículo/Salón</p>
                   <p class="form-control">R1-06</p>
                 </div>
                 <div class="col-2">
@@ -103,7 +103,7 @@
                 </div>
                 <div class="col-md-2">
                   <p>No. de Serie</p>
-                  <p class="form-control">543245235543342</p>
+                  <p class="form-control">54324523554334</p>
                 </div>
                 <div class="col-md-2">
                   <p>No. de Inventario</p>
@@ -156,12 +156,12 @@
           <h6>Integrante(s) UC</h6>
           <p class="form-control sol-ovfw">Alexis Orozco</p>
         </div>
-        <div class="col-md-1 col-sm-1 col-xs-12">
+        <div class="col-md-2 col-sm-2 col-xs-12">
           <h6>Fecha</h6>
           <p class="form-control">12/09/2020</p>
         </div>
         <!--Problema reportado-->
-        <div class="col-md-9 col-sm-9 col-xs-12">
+        <div class="col-md-8 col-sm-8 col-xs-12">
           <h6>Problema reportado</h6>
           <p class="form-control sol-ovfw">La computadora no prende</p>
         </div>
@@ -191,12 +191,12 @@
             <h6>Integrante(s) UC</h6>
             <p class="form-control sol-ovfw">Alexis Orozco</p>
           </div>
-          <div class="col-md-1 col-sm-1 col-xs-12">
+          <div class="col-md-2 col-sm-2 col-xs-12">
             <h6>Fecha</h6>
             <p class="form-control">12/09/2020</p>
           </div>
           <!--Problema reportado-->
-          <div class="col-md-9 col-sm-9 col-xs-12">
+          <div class="col-md-8 col-sm-8 col-xs-12">
             <h6>Problema reportado</h6>
             <p class="form-control sol-ovfw">La computadora no prende</p>
           </div>

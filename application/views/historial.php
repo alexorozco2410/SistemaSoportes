@@ -20,10 +20,10 @@
         </div>
       </label>
     </div>
-    <div class="col-sm-5 col-md-5">
+    <div class="col-4">
 
     </div>
-    <div class=" col-sm-1 col-md-1">
+    <div class=" col-2 col-w justify-content-right">
       <select class="form-control custom-select d-block select-semestre" name="semestre-soportes">
         <option value="">2020-1</option>
         <option value="">2020-2</option>

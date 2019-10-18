@@ -3,8 +3,31 @@
   <div class="row">
     <!--parte izquierda de la pagina correspondiente a las opciones de equipos a disposicion-->
     <div class="col-md-3 col-sm-3 col-xs-12 ss bg-lp">
-      <div class="col-sol-1">
-        <p>Equipos</p>
+      <div class="row">
+        <div class="col-12 col-sol-1">
+          <h4 class="tit-equipos">Mis Equipos</h4>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="l-equipos list-group mb-4">
+            <button class="list-group-item list-group-item-action" onclick="">HOLA</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+          </div>
+        </div>
       </div>
     </div>
     <!--Parte derecha de la pagina correspondiente al formulario-->

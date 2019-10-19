@@ -51,7 +51,6 @@
   overflow: auto;
   max-height: 65vh;
   scrollbar-width: thin;
-  scrollbar: none;
 }
 
 .tit-equipos{
@@ -60,9 +59,13 @@
 }
 
 .list-group-item{
-  border: 3px solid rgba(1, 1, 1, 0.7);
+  border: 3px solid rgba(5, 5, 5, 0.7);
+  background-color: #4470b5;
+  text-align: center;
+  color: white;
+  font-family: fantasy;
 }
 
-.list-group-item:hogver{
+.list-group-item:hover{
   background-color: rgba(200, 200, 205, 0.1);
 }

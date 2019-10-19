@@ -15,6 +15,6 @@
     <script src="../assets/js/bootstrap.js"></script>
 
     <!--my css -->
-    <link rel="stylesheet" href="../assets/css/ljjogin.css">
+    
   </head>
   <body>

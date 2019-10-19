@@ -23,13 +23,16 @@
   <body>
     <div class="container-fluid bg">
       <div class="row">
-        <div class="col-md-5 col-sm-5 col-xs-12">
+      <!--  <div class="col-md-5 col-sm-5 col-xs-12">
           <div class="lg-log">
             <img id="log-dicyg" src="../assets/images/dicyg.png" alt="no hay imagen"><br>
             <!--<img id="log-uc" src="../assets/images/UC.png" alt="no hay imagen">!-->
-          </div>
+          <!--</div>
+        </div>-->
+        <div class="col-md-3 col-sm-3 col-sx-12">
+
         </div>
-        <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-md-5 col-sm-5 col-xs-12">
           <form class="form-container shadow-lg p-3 mb-5 rounded was-validated">
             <div class="img-login">
                 <img src="../assets/images/login.png" alt="no se encontro imagen">
@@ -45,11 +48,11 @@
               <input type="password" class="form-control" id="InputPassword" placeholder="Contraseña" required>
               <!--<small id="loginHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>!-->
             </div>
-            
+
             <button type="submit" class="btn btn-primary">Ingresar</button>
           </form>
         </div>
-          <div class="col-3 col-sm-3 col-xs-12"></div>
+          <div class="col-md-3 col-sm-3 col-xs-12"></div>
       </div>
     </div>
   </body>

@@ -11,21 +11,21 @@
       <div class="row">
         <div class="col-md-12">
           <div class="l-equipos list-group mb-4">
-            <button class="list-group-item list-group-item-action" onclick="">HOLA</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">HOLA</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
           </div>
         </div>
       </div>

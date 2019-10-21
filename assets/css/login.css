@@ -1,5 +1,5 @@
 body{
-  background-image: url('../images/op2.jpg');
+  background-image: url('../images/op5.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ body{
 .form-container{
 
   padding: 8%;
-  margin-top: 60%;
+  margin-top: 55%;
   min-width: 300px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;

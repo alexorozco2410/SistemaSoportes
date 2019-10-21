@@ -32,7 +32,7 @@
         <div class="col-md-3 col-sm-3 col-sx-12">
 
         </div>
-        <div class="col-md-5 col-sm-5 col-xs-12">
+        <div class="col-md-6 col-sm-6 col-xs-12 justify-content-center">
           <form class="form-container shadow-lg p-3 mb-5 rounded was-validated">
             <div class="img-login">
                 <img src="../assets/images/login.png" alt="no se encontro imagen">

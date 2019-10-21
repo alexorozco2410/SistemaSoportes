@@ -9,9 +9,9 @@ body{
 }
 
 .form-container{
-
-  padding: 8%;
-  margin-top: 55%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 45%;
   min-width: 300px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;

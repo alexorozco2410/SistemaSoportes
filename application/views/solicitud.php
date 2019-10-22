@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/solicitud.css">
+<link rel="stylesheet" href="<?php echo CSS; ?>/solicitud.css">
 <div class="container-fluid">
   <div class="row">
     <!--parte izquierda de la pagina correspondiente a las opciones de equipos a disposicion-->
@@ -11,21 +11,14 @@
       <div class="row">
         <div class="col-md-12">
           <div class="l-equipos list-group mb-4">
-            <button class="btn list-group-item list-group-item-action" onclick="">HOLA</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
-            <button class="btn list-group-item list-group-item-action" onclick="">lalalala</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
           </div>
         </div>
       </div>

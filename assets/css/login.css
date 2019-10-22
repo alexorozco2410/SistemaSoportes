@@ -1,5 +1,5 @@
 body{
-  background-image: url('../images/op5.jpg');
+  background-image: url('http://localhost/SistemaSoportes/ASSETS/images/op2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -11,7 +11,7 @@ body{
 .form-container{
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: 45%;
+  margin-top: 50%;
   min-width: 300px;
   background-color: rgba(0, 0, 0, 0.6);
   color: white;

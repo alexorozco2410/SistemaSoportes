@@ -18,16 +18,16 @@
           <div class="container-fluid">
             <ul class="list-inline text-center list-unstyled mb-0">
               <li class="list-inline-item text-center">
-                <a href="#" class="fa fa-facebook"></a>
+                <a href="https://www.facebook.com/DICyG.FI" class="fa fa-facebook"></a>
               </li>
               <li class="list-inline-item text-center">
-                <a href="#" class="fa fa-twitter"></a>
+                <a href="https://twitter.com/dicyg" class="fa fa-twitter"></a>
               </li>
               <li class="list-inline-item text-center">
-                <a href="#" class="fa fa-rss"></a>
+                <a href="http://dicyg.fi-c.unam.mx" class="fa fa-rss"></a>
               </li>
               <li class="list-inline-item text-center">
-                <a href="#" class="fa fa-youtube"></a>
+                <a href="https://www.youtube.com/channel/UCvBeiUhrhqV4KEFjuQCLzjQ" class="fa fa-youtube"></a>
               </li>
             </ul>
           </div>

@@ -63,7 +63,8 @@
   background-color: #4470b5;
   text-align: center;
   color: white;
-  font-family: fantasy;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .list-group-item:hover{

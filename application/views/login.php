@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.js"></script>
 
     <!--my css -->
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="<?php echo CSS; ?>/login.css">
 
   </head>
   <body>
@@ -35,7 +35,7 @@
         <div class="col-md-6 col-sm-6 col-xs-12 justify-content-center">
           <form class="form-container shadow-lg p-3 mb-5 rounded was-validated">
             <div class="img-login">
-                <img src="../assets/images/login.png" alt="no se encontro imagen">
+                <img src="<?php echo IMG; ?>/login.png" alt="no se encontro imagen">
             </div>
             <h4 style="text-align:center;">Sistema de Soportes</h4>
             <div class="form-group">

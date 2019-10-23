@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/mis_soportes.css">
+<link rel="stylesheet" href="<?php echo CSS; ?>/mis_soportes.css">
 
 <div class="container-fluid cont-style page-container">
   <div class="row justify-content-center">

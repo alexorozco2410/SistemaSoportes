@@ -53,3 +53,6 @@ $route['default_controller'] = 'login_controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['solicitud'] = 'solicitud_controller';
+$route['mis_soportes'] = 'mis_soportes_controller';
+$route['historial'] = 'historial_controller';
+$route['informacion_soportes'] = 'info_soportes_controller';

@@ -88,3 +88,4 @@ defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest auto
 define('URL','http://localhost/SistemaSoportes/');
 define('CSS',URL.'assets/css/');
 define('IMG',URL.'assets/images/');
+define('JS',URL.'assets/js/');

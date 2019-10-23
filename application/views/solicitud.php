@@ -67,8 +67,13 @@
           <!--Informacion del equipo!-->
           <div class="row">
             <div class="col-md-3 mb-4">
-              <label for="Equipo">Equipo</label>
-              <input id="Equipo" class="form-control" type="text" name="equipo" placeholder="PC/Lap/Cel/Otro" required>
+              <label for="TipoEquipo">Equipo</label>
+              <select id="TipoEquipo" class="form-control custom-select d-block w-100" name="TipoE" required>
+                <option value="">Selecciona el tipo</option>
+                <option value="">PC</option>
+                <option value="">Laptop</option>
+                <option value="">Celular</option>
+              </select>
             </div>
             <div class="col-md-3 mb-4">
               <label for="Marca">Marca</label>

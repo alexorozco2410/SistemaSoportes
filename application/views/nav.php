@@ -1,4 +1,4 @@
-  <link rel="stylesheet" href="../assets/css/nav-style.css">
+  <link rel="stylesheet" href="<?php echo CSS; ?>/nav-style.css">
   <nav class="navbar navbar-dark" style="background-color:#16253d;">
     <!-- Brand -->
     <div class="btn-links">

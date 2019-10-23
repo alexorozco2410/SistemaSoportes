@@ -1,6 +1,6 @@
-<link rel="stylesheet" href="../assets/css/info_soporte.css">
-<link rel="stylesheet" href="../assets/css/mis_soportes.css">
-<link rel="stylesheet" href="../assets/css/historial.css">
+<link rel="stylesheet" href="<?php echo CSS; ?>/info_soporte.css">
+<link rel="stylesheet" href="<?php echo CSS; ?>/mis_soportes.css">
+<link rel="stylesheet" href="<?php echo CSS; ?>/historial.css">
 
 <div class="container-fluid page-container info-style">
 <!--titulo para indicar de que equipo se esta viendo el historial-->
@@ -34,6 +34,40 @@
       <p class="form-control">Nombre del integrante</p>
     </div>
   </div>
+  <!--para indicar si se instaló algun SW y selecionar cual-->
+  <div class="row justify-content-center">
+    <div class="col-md-3 col-sm-3 col-sx-12">
+      <button class="btn btn-primary inst-sw mb-2" data-toggle="collapse" href=".collapse-sw">Instalación de Software</button>
+    </div>
+    <div class="col-md-3 col-sm-3 col-sx-12">
+      <button class="btn btn-primary inst-sw mb-2" data-toggle="collapse" href=".op-resguardo">Resguardo de equipo</button>
+    </div>
+  </div>
+  <div class="row collapse collapse-sw" id="collapse-sw-l">
+    <div class="col-md-4 col-sm-4 col-sx-12 collapse collapse-sw" id="collapse-sw">
+      <select id="SW" class="form-control mb-2 custom-select d-block w-100" name="SW-inst">
+        <option value="">---------</option>
+        <option value="">Office</option>
+        <option value="">Antivirus</option>
+        <option value="">WinRAR</option>
+        <option value="">PDF</option>
+        <option value="">AutoCAD</option>
+        <option value="">ArcGIS</option>
+        <option value="">AntiSpyware</option>
+      </select>
+    </div>
+    <div class="col-md-12 col-sm-12 col-sx-12">
+      <p class="form-control">Software a instalar</p>
+    </div>
+  </div>
+
+  <div class="row collapse op-resguardo">
+    <div class="col-md-12 col-sm-12 col-sz-12 op-resguardo">
+      <label for="resg">Equipos a Resguardo</label>
+      <input id="resg" class="form-control" type="text" name="eq-resguardo" placeholder="Equipos a resguardo...">
+    </div>
+  </div>
+
   <!--seccion para la indicar la solucion y terminar el soporte -->
   <div class="row">
     <div class="col-md-12 col-sm-12 col-sx-12">
@@ -45,7 +79,7 @@
   </div>
   <!--boton para indicar que se terminó el soporte-->
   <div class="row btn-end-sop mt-2">
-    <div class="cool-md-12 col-sm-12 col-sx-12">
+    <div class="col-md-12 col-sm-12 col-sx-12">
       <button name="end-soporte" type="submit" class="btn btn-primary bg-success">Terminar</button>
     </div>
   </div>
@@ -134,6 +168,16 @@
                 <div class="col-1">
                 </div>
               </div>
+              <div class="row">
+                <div class="col-1">
+                </div>
+                <div class="col-md-10">
+                  <p>Software instalado en el equipo:</p>
+                  <p class="form-control"></p>
+                </div>
+                <div class="col-1">
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -144,7 +188,7 @@
   <!--titulo de la seccion que muestra las soluciones a soportes anteriores-->
   <div class="row justify-content-left">
     <div class="col-md-12 col-sm-12 col-sx-12">
-      <h5 class="mb-3 subtit">Soportes Anteriores</h5>
+      <h4 class="mb-3 subtit">Soportes Anteriores</h4>
     </div>
   </div>
 <!--Historial de problemas y soluciones dadas-->
@@ -165,6 +209,16 @@
           <h6>Problema reportado</h6>
           <p class="form-control sol-ovfw">La computadora no prende</p>
         </div>
+        <!--si se instaló algun SW-->
+        <div class="col-md-12 col-sm-12 col-sx-12">
+          <h6>Software instalado</h6>
+          <p class="form-control sol-ovfw"></p>
+        </div>
+        <!--Equipos a resguardo-->
+        <div class="col-md-12 col-sm-12 col-sx-12">
+          <h6>Equipos que quedaron a resguardo</h6>
+          <p class="form-control sol-ovfw"></p>
+        </div>
         <!--Solucion dada-->
         <div class="col-md-12 col-sm-12 col-xs-12">
           <h6>Solución</h6>
@@ -183,39 +237,49 @@
   </div>
   <!--termina un registro-->
   <!--Historial de problemas y soluciones dadas-->
-    <div class="row justify-content-left box-hist card">
-      <!--informacion de quien y cuando se hizo el soporte-->
-      <div class="card-body">
-        <div class="row">
-          <div class="col-md-2 col-sm-2 col-xs-12">
-            <h6>Integrante(s) UC</h6>
-            <p class="form-control sol-ovfw">Alexis Orozco</p>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-12">
-            <h6>Fecha</h6>
-            <p class="form-control">12/09/2020</p>
-          </div>
-          <!--Problema reportado-->
-          <div class="col-md-8 col-sm-8 col-xs-12">
-            <h6>Problema reportado</h6>
-            <p class="form-control sol-ovfw">La computadora no prende</p>
-          </div>
-          <!--Solucion dada-->
-          <div class="col-md-12 col-sm-12 col-xs-12">
-            <h6>Solución</h6>
-            <p class="form-control reg-sol card-text">
-              g <br>
-              g <br>
-              b <br>
-              g <br>
-              hola <br>
-              xd <br>
-              lul <br>
-            </p>
-          </div>
+  <div class="row justify-content-left box-hist card">
+    <!--informacion de quien y cuando se hizo el soporte-->
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-2 col-sm-2 col-xs-12">
+          <h6>Integrante(s) UC</h6>
+          <p class="form-control sol-ovfw">Alexis Orozco</p>
+        </div>
+        <div class="col-md-2 col-sm-2 col-xs-12">
+          <h6>Fecha</h6>
+          <p class="form-control">12/09/2020</p>
+        </div>
+        <!--Problema reportado-->
+        <div class="col-md-8 col-sm-8 col-xs-12">
+          <h6>Problema reportado</h6>
+          <p class="form-control sol-ovfw">La computadora no prende</p>
+        </div>
+        <!--si se instaló algun SW-->
+        <div class="col-md-12 col-sm-12 col-sx-12">
+          <h6>Software instalado</h6>
+          <p class="form-control sol-ovfw"></p>
+        </div>
+        <!--Equipos a resguardo-->
+        <div class="col-md-12 col-sm-12 col-sx-12">
+          <h6>Equipos que quedaron a resguardo</h6>
+          <p class="form-control sol-ovfw"></p>
+        </div>
+        <!--Solucion dada-->
+        <div class="col-md-12 col-sm-12 col-xs-12">
+          <h6>Solución</h6>
+          <p class="form-control reg-sol card-text">
+            g <br>
+            g <br>
+            b <br>
+            g <br>
+            hola <br>
+            xd <br>
+            lul <br>
+          </p>
         </div>
       </div>
     </div>
+  </div>
     <!--termina un registro-->
 
 </div>

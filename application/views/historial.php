@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="../assets/css/mis_soportes.css">
-<link rel="stylesheet" href="../assets/css/historial.css">
+<link rel="stylesheet" href="<?php echo CSS; ?>/mis_soportes.css">
+<link rel="stylesheet" href="<?php echo CSS; ?>/historial.css">
 
 <div class="container-fluid page-container tabh-style">
   <!--Titulo de la pagina-->
@@ -48,7 +48,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr onclick="location='info_soportes_controller'">
+            <tr onclick="location='informacion_soportes'">
               <td>SP/UC/168/2020-1</td>
               <td>Laptop</td>
               <td>xxx. Alexis Orozco</td>

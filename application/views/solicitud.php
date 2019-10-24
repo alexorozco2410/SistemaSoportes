@@ -11,14 +11,14 @@
       <div class="row">
         <div class="col-md-12">
           <div class="l-equipos list-group mb-4">
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
-            <button class="list-group-item list-group-item-action btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
           </div>
         </div>
       </div>

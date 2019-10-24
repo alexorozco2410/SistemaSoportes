@@ -16,7 +16,7 @@
       <h5>Integrante(s) asignado(s)</h5>
     </div>
     <div class="col-md-8 col-sm-8 col-sx-12">
-      <form class="asig-IUC" action="info_soportes_controller" method="post"><!--se ejecutara una funcion para agregar al integrante-->
+      <form class="asig-IUC" action="informacion_soportes" method="post"><!--se ejecutara una funcion para agregar al integrante-->
         <div class="row">
           <div class="col-md-4 col-sm-4 col-sx-12">
             <input class="form-control" type="text" name="nombre-IUC" placeholder="Nombre integrante">
@@ -37,10 +37,10 @@
   <!--para indicar si se instaló algun SW y selecionar cual-->
   <div class="row justify-content-center">
     <div class="col-md-3 col-sm-3 col-sx-12">
-      <button class="btn btn-primary inst-sw mb-2" data-toggle="collapse" href=".collapse-sw">Instalación de Software</button>
+      <button class="btn btn-info btn-h mb-2" data-toggle="collapse" href=".collapse-sw">Instalación de Software</button>
     </div>
     <div class="col-md-3 col-sm-3 col-sx-12">
-      <button class="btn btn-primary inst-sw mb-2" data-toggle="collapse" href=".op-resguardo">Resguardo de equipo</button>
+      <button class="btn btn-info btn-h mb-2" data-toggle="collapse" href=".op-resguardo">Resguardo de equipo</button>
     </div>
   </div>
   <div class="row collapse collapse-sw" id="collapse-sw-l">
@@ -63,7 +63,7 @@
 
   <div class="row collapse op-resguardo">
     <div class="col-md-12 col-sm-12 col-sz-12 op-resguardo">
-      <label for="resg">Equipos a Resguardo</label>
+      <label for="resg">Indica los equipos que quedan a Resguardo</label>
       <input id="resg" class="form-control" type="text" name="eq-resguardo" placeholder="Equipos a resguardo...">
     </div>
   </div>

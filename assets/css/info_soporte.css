@@ -48,3 +48,9 @@
     border-top-color: rgba(255, 0, 150, 0.5);
     border-bottom-color:  rgba(255, 0, 150, 0.5);
 }
+
+.btn-h{
+  height: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

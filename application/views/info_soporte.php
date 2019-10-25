@@ -43,9 +43,9 @@
       <button class="btn btn-info btn-h mb-2" data-toggle="collapse" href=".op-resguardo">Resguardo de equipo</button>
     </div>
   </div>
-  <div class="row collapse collapse-sw" id="collapse-sw-l">
-    <div class="col-md-4 col-sm-4 col-sx-12 collapse collapse-sw" id="collapse-sw">
-      <select id="SW" class="form-control mb-2 custom-select d-block w-100" name="SW-inst">
+  <div class="row mb-2 collapse collapse-sw" id="collapse-sw-l">
+    <div class="col-md-3 col-sm-3 col-sx-12 collapse collapse-sw" id="collapse-sw">
+      <!--<select id="SW" class="form-control mb-2 custom-select d-block w-100" name="SW-inst">
         <option value="">---------</option>
         <option value="">Office</option>
         <option value="">Antivirus</option>
@@ -54,14 +54,52 @@
         <option value="">AutoCAD</option>
         <option value="">ArcGIS</option>
         <option value="">AntiSpyware</option>
-      </select>
+      </select>-->
+      <div class="form-check">
+        <label class="form-check-label" for="check1">
+          <input type="checkbox" class="form-check-input" id="check1" name="software[]" value="Office">Office
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="check2">
+          <input type="checkbox" class="form-check-input" id="check2" name="software[]" value="Antivirus">Antivirus
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="check3">
+          <input type="checkbox" class="form-check-input" id="check3" name="software[]" value="WinRAR">WinRAR
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="check4">
+          <input type="checkbox" class="form-check-input" id="check4" name="software[]" value="PDF">PDF
+        </label>
+      </div>
+
     </div>
-    <div class="col-md-12 col-sm-12 col-sx-12">
+    <div class="col-md-3 col-sm-3 col-sx-12">
+      <div class="form-check">
+        <label class="form-check-label" for="check5">
+          <input type="checkbox" class="form-check-input" id="check5" name="software[]" value="AutoCAD">AutoCAD
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="check6">
+          <input type="checkbox" class="form-check-input" id="check6" name="software[]" value="ArcGIS">ArcGIS
+        </label>
+      </div>
+      <div class="form-check">
+        <label class="form-check-label" for="check7">
+          <input type="checkbox" class="form-check-input" id="check7" name="software[]" value="AntiSpayware">AntiSpayware
+        </label>
+      </div>
+    </div>
+    <!--<div class="col-md-12 col-sm-12 col-sx-12">
       <p class="form-control">Software a instalar</p>
-    </div>
+    </div>-->
   </div>
 
-  <div class="row collapse op-resguardo">
+  <div class="row collapse op-resguardo mb-2">
     <div class="col-md-12 col-sm-12 col-sz-12 op-resguardo">
       <label for="resg">Indica los equipos que quedan a Resguardo</label>
       <input id="resg" class="form-control" type="text" name="eq-resguardo" placeholder="Equipos a resguardo...">

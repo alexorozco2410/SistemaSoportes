@@ -34,7 +34,7 @@
   <div class="row">
     <div class="col-md-12 col-sm-12 col-sx-12">
       <div class="table-responsive">
-        <table class="table ">
+        <table class="table" id="example">
           <thead class="thead-dark">
             <tr class="atr-hist">
               <th class="atr-lg">Folio</th>
@@ -48,6 +48,156 @@
             </tr>
           </thead>
           <tbody>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
+            <tr onclick="location='informacion_soportes'">
+              <td>SP/UC/168/2020-1</td>
+              <td>Laptop</td>
+              <td>xxx. Alexis Orozco</td>
+              <td>r2-30</td>
+              <td>Alexis Orozco</td>
+              <td>10/09/2019</td>
+              <td>10/09/2019</td>
+              <td>Por Asignar</td>
+            </tr>
             <tr onclick="location='informacion_soportes'">
               <td>SP/UC/168/2020-1</td>
               <td>Laptop</td>

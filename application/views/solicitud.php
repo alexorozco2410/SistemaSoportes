@@ -97,15 +97,26 @@
               <label for="HOST">HOST</label>
               <input id="HOST" class="form-control" type="text" name="host" placeholder="HOST">
             </div>
-            <div class="col-md-3 mb-4">
+            <div class="col-md-2mb-4">
               <label for="E-S">¿Dispositivo E/S?</label><br>
               <input id="E-S" class="sol-btns" type="radio" name="e-s" value="Si">Sí
               <input id="E-S" class="sol-btns" type="radio" name="e-s" value="No">No
             </div>
-            <div class="col-md-3 mb-4">
+            <!--<div class="col-md-2 mb-4">
               <label for="Urgente">¿Es urgente?</label><br>
               <input id="Urgente" class="sol-btns" type="radio" name="urgente" value="Sí">Sí
               <input id="Urgente" class="sol-btns" type="radio" name="urgente" value="No">No
+            </div>-->
+            <div class="col-md-4">
+              <div class="row" style="padding-left:5%;">
+                <label for="fecha_agen">Fecha y hora para atender el soporte</label>
+                <div class="col-md-6" style="padding:0;">
+                  <input class="form-control" type="date" id="picker" name="fecha_sol" style="padding:0;">
+                </div>
+                <div class="col-md-5">
+                        <input class="form-control" type="time" name="hora_sol">
+                </div>
+              </div>
             </div>
           </div>
           <div class="row">

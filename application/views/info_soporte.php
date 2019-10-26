@@ -15,10 +15,10 @@
     <div class="col-md-3 col-sm-3 col-sx-12">
       <h5>Integrante(s) asignado(s)</h5>
     </div>
-    <div class="col-md-8 col-sm-8 col-sx-12">
+    <div class="col-md-6 col-sm-6 col-sx-12">
       <form class="asig-IUC" action="informacion_soportes" method="post"><!--se ejecutara una funcion para agregar al integrante-->
         <div class="row">
-          <div class="col-md-4 col-sm-4 col-sx-12">
+          <div class="col-md-5 col-sm-5 col-sx-12">
             <input class="form-control" type="text" name="nombre-IUC" placeholder="Nombre integrante">
           </div>
           <div class="col-md-3 col-sm-3 col-sx-12">
@@ -26,6 +26,9 @@
           </div>
         </div>
       </form>
+    </div>
+    <div class="col-md-3 col-sm-3 col-sx-12">
+      <p class="fecha_soporte_agen mb-0">dd/mm/aaa - 24:00</p>
     </div>
   </div>
   <!--para mostrar todos lo integrantes involucrados en el soporte -->
@@ -46,7 +49,7 @@
   <div class="row mb-2 collapse collapse-sw" id="collapse-sw-l">
     <div class="col-md-3 col-sm-3 col-sx-12 collapse collapse-sw" id="collapse-sw">
       <!--<select id="SW" class="form-control mb-2 custom-select d-block w-100" name="SW-inst">
-        <option value="">---------</option>
+        <option value="">-</option>
         <option value="">Office</option>
         <option value="">Antivirus</option>
         <option value="">WinRAR</option>
@@ -100,7 +103,7 @@
   </div>
 
   <div class="row collapse op-resguardo mb-2">
-    <div class="col-md-12 col-sm-12 col-sz-12 op-resguardo">
+    <div class="col-md-12 col-sm-12 col-sx-12 op-resguardo">
       <label for="resg">Indica los equipos que quedan a Resguardo</label>
       <input id="resg" class="form-control" type="text" name="eq-resguardo" placeholder="Equipos a resguardo...">
     </div>

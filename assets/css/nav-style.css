@@ -35,3 +35,10 @@
 .btn-links{
   color: white;
 }
+
+.logout{
+  float: right;
+  font-family: cursive;
+  background-color: red;
+  margin-right: 30px;
+}

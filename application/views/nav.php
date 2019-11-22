@@ -7,7 +7,7 @@
       </button>Enlaces
     </div>
 
-    <h5 class="navbar-brand">Sistema de Soportes</h5>
+    <h5 class="navbar-brand">Sistema de Soportes (<?php echo $_SESSION['usuario'];?>)</h5>
 
     <form class="form-inline" action="">
       <input class="form-control mr-sm-1" type="text" placeholder="Search">
@@ -21,6 +21,9 @@
       </li>
       <li class="my-nav-item">
         <a class="my-nav-link" href="mis_soportes">Mis Soportes</a>
+      </li>
+      <li class="my-nav-item logout">
+        <a class="my-nav-link" href="login_controller" onclick="">Cerrar sesión</a>
       </li>
     </ul>
   </div>

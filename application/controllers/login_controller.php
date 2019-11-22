@@ -11,4 +11,40 @@ class Login_controller extends CI_Controller {
 	{
 		$this->load->view('login');
 	}
+  public function logUsuario(){
+    $this->form_validation->set_message('required', 'Es necesario ingresar el campo %s.');
+
+    $this->form_validation->set_rules('inputPassword', 'Contraseña', 'required');
+    $this->form_validation->set_rules('inputUsuario', 'Nombre de usuario', 'required');
+
+    if ($this->form_validation->run() == FALSE)
+               {
+                       echo json_encode(array('status' => 0, 'error' => 'faltan datos obligatorios'));
+               }
+               else
+               {
+                       $this->load->model('login_model');
+                       $usuario = $this->input->post('inputUsuario');
+                       $contraseña = $this->input->post('inputPassword');
+                       $id_usuario = $this->login_model->validarSesion($usuario, $contraseña);
+                       //var_dump($id_usuario);
+                       if($id_usuario==[]){
+                         echo json_encode(array('status' => 0, 'error' => 'Usuario o contraseña incorrectos'));
+                       }else{
+                         $newdata = array(
+                        'id_usuario'  => $id_usuario[0]->id_usuario,
+                        'usuario'     => $usuario,
+                        'logged_in' => TRUE
+                               );
+
+                          $this->session->set_userdata($newdata);
+                          echo json_encode(array('status' => 1));
+                       }
+
+               }
+  }
+  public function logoutUsuario(){
+    session_destroy();
+  }
+
 }

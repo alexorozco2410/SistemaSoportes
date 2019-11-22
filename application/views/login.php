@@ -16,6 +16,10 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.js"></script>
 
+    <script src="<?php echo JS; ?>/login.js">
+
+    </script>
+
     <!--my css -->
     <link rel="stylesheet" href="<?php echo CSS; ?>/login.css">
 
@@ -33,23 +37,23 @@
 
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 justify-content-center">
-          <form class="form-container shadow-lg p-3 mb-5 rounded was-validated">
+          <form class="form-container shadow-lg p-3 mb-5 rounded was-validated" id='login'>
             <div class="img-login">
                 <img src="<?php echo IMG; ?>/login.png" alt="no se encontro imagen">
             </div>
             <h4 style="text-align:center;">Sistema de Soportes</h4>
             <div class="form-group">
               <label for="InputUsuario">Nombre de Usuario</label>
-              <input type="email" class="form-control" id="inputUsuario" aria-describedby="emailHelp" placeholder="Nombre de usuario" required>
+              <input type="text" class="form-control" id="inputUsuario" name="inputUsuario" aria-describedby="emailHelp" placeholder="Nombre de usuario" required>
               <!--<small id="loginHelp" class="form-text text-muted">We'll never share your information with anyone else.</small>!-->
             </div>
             <div class="form-group">
               <label for="exampleInputPassword">Contraseña</label>
-              <input type="password" class="form-control" id="InputPassword" placeholder="Contraseña" required>
+              <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Contraseña" required>
               <!--<small id="loginHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>!-->
             </div>
 
-            <button type="submit" class="btn btn-primary">Ingresar</button>
+            <button type="button" class="btn btn-primary" onclick="login()">Ingresar</button>
           </form>
         </div>
           <div class="col-md-3 col-sm-3 col-xs-12"></div>

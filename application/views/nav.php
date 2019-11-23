@@ -1,4 +1,8 @@
+
   <link rel="stylesheet" href="<?php echo CSS; ?>/nav-style.css">
+  <script src="<?php echo JS; ?>/logout.js">
+
+  </script>
   <nav class="navbar navbar-dark" style="background-color:#16253d;">
     <!-- Brand -->
     <div class="btn-links">
@@ -23,7 +27,7 @@
         <a class="my-nav-link" href="mis_soportes">Mis Soportes</a>
       </li>
       <li class="my-nav-item logout">
-        <a class="my-nav-link" href="login_controller" onclick="">Cerrar sesión</a>
+        <a type="button" href="login" class="my-nav-link" onclick="logout()">Cerrar sesión</a>
       </li>
     </ul>
   </div>

@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="<?php echo CSS; ?>/solicitud.css">
+  <script src="<?php echo JS; ?>/buscarEquipos.js">
+
+  </script>
 <div class="container-fluid">
   <div class="row">
     <!--parte izquierda de la pagina correspondiente a las opciones de equipos a disposicion-->
@@ -11,7 +14,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="l-equipos list-group mb-4">
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="buscarEquipos()"><?php echo $_SESSION['tipo']; ?></button>
             <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
             <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
             <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>

@@ -16,21 +16,9 @@ class Solicitud_controller extends CI_Controller {
       $this->load->view('footer');
       $this->load->view('final');
     }else{
-      $this->load->view('login');
+      $this->load->view('Login');
     }
 	}
 
-  public function obtenerEquipos(){
-    $this->load->model('solicitud_model');
-    $equipos = $this->solicitud_model->buscarEquipo($_SESSION['id_usuario']);
-    //var_dump($equipos);
-
-    if($equipos!=[]){
-      $newdata = array(
-     'tipo'  => $equipos[0]->equipo,
-            );
-       $this->session->set_userdata($newdata);
-    }
-  }
 
 }

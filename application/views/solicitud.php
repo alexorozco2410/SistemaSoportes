@@ -14,7 +14,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="l-equipos list-group mb-4">
-            <button type="button" class="btn list-group-item btn-equipo" onclick="buscarEquipos()"><?php echo $_SESSION['tipo']; ?></button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick=""><?php echo $_SESSION['tipo'][1]; ?></button>
             <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
             <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
             <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>

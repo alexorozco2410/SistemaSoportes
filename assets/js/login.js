@@ -10,9 +10,16 @@ function login(){
       if(data.status==0){
         alert(data.error)
       }else {
+        buscarEquipos()
         alert('Bienvenido al sistema')
         location.href ="./solicitud";
       }
     }
+  });
+}
+
+function buscarEquipos(){
+  $.ajax({
+    url: 'login_controller/obtenerEquipos',
   });
 }

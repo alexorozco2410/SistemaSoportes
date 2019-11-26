@@ -48,4 +48,18 @@ class Login_controller extends CI_Controller {
     $this->load->view('login');
   }
 
+  public function obtenerEquipos(){
+    $this->load->model('login_model');
+    $equipos = $this->login_model->buscarEquipo($_SESSION['id_usuario']);
+    //var_dump($equipos);
+
+    for ($i=0; $i < count($equipos); $i++) {
+      $newdata = array(
+        'tipo' => $equipos[$i]->equipo
+      );
+    }
+    $this->session->set_userdata($newdata);
+
+  }
+
 }

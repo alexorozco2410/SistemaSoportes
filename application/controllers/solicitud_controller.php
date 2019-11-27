@@ -20,5 +20,11 @@ class Solicitud_controller extends CI_Controller {
     }
 	}
 
+  public function informacionEquipo($id_equipo){
+    $this->load->model('solicitud_model');
+    $info = $this->solicitud_model->buscarInfo($id_equipo);//obtiene toda la informacion del formulario
+    //var_dump($info);
+    echo json_encode($info);
+  }
 
 }

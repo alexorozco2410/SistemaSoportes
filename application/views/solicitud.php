@@ -2,6 +2,9 @@
   <script src="<?php echo JS; ?>/buscarEquipos.js">
 
   </script>
+  <script src="<?php echo JS; ?>/solicitud.js">
+
+  </script>
 <div class="container-fluid">
   <div class="row">
     <!--parte izquierda de la pagina correspondiente a las opciones de equipos a disposicion-->
@@ -13,15 +16,15 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-          <div class="l-equipos list-group mb-4">
-            <button type="button" class="btn list-group-item btn-equipo" onclick=""><?php echo $_SESSION['tipo'][1]; ?></button>
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+          <div class="l-equipos list-group mb-4" id="listaEquipos">
+            <button type="button" class="btn list-group-item btn-equipo" onclick="llenarFormulario(3)"><?php echo $_SESSION['tipo']; ?></button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
           </div>
         </div>
       </div>
@@ -34,44 +37,44 @@
           <div class="row">
             <div class="col-md-4 mb-4">
               <label for="Nombre">Nombre</label>
-              <input id="Nombre" class="form-control" type="text" name="nombre" placeholder="Nombre" required>
+              <input id="Nombre" class="form-control" type="text" name="nombre" placeholder="Nombre" value="" required>
             </div>
             <div class="col-md-4 mb-4">
               <label for="ApellidoPat">Appellido paterno</label>
-              <input id="ApellidoPat" class="form-control" type="text" name="ApPat" placeholder="Apellido Paterno" required>
+              <input id="ApellidoPat" class="form-control" type="text" name="ApPat" placeholder="Apellido Paterno" value="" required>
             </div>
             <div class="col-md-4 mb-4">
               <label for="ApellidoMat">Apellido materno</label>
-              <input id="ApellidoMat" class="form-control" type="text" name="ApMat" placeholder="Apellido Materno">
+              <input id="ApellidoMat" class="form-control" type="text" name="ApMat" placeholder="Apellido Materno" value="">
             </div>
           </div>
           <div class="row">
             <div class="col-md-4 mb-4">
               <label for="Departamento">Departamento</label>
               <!--<input id="Departamento" class="form-control" type="text" name="Dep" placeholder="Departamento">-->
-              <select id="Departamento" class="form-control custom-select d-block w-100" name="Dep" required>
+              <select id="Departamento" class="form-control custom-select d-block w-100" name="Dep" value="" required>
                 <option value="">Selecciona departamento</option>
                 <option value="">Hidraulica</option>
               </select>
             </div>
             <div class="col-md-3 mb-4">
               <label for="Cubiculo">Cubículo</label>
-              <input id="Cubiculo" class="form-control" type="text" name="cubiculo" placeholder="Cubículo">
+              <input id="Cubiculo" class="form-control" type="text" name="cubiculo" placeholder="Cubículo" value="">
             </div>
             <div class="col-md-3 mb-4">
               <label for="Tel">Teléfono</label>
-              <input id="Tel" class="form-control" type="tel" name="telefono" placeholder="Teléfono">
+              <input id="Tel" class="form-control" type="tel" name="telefono" placeholder="Teléfono" value="">
             </div>
             <div class="col-md-2 mb-4">
               <label for="Ext">Ext</label>
-              <input id="Ext" class="form-control" type="tel" name="ext" placeholder="Extensión">
+              <input id="Ext" class="form-control" type="tel" name="ext" placeholder="Extensión" value="">
             </div>
           </div>
           <!--Informacion del equipo!-->
           <div class="row">
             <div class="col-md-3 mb-4">
               <label for="TipoEquipo">Equipo</label>
-              <select id="TipoEquipo" class="form-control custom-select d-block w-100" name="TipoE" required>
+              <select id="TipoEquipo" class="form-control custom-select d-block w-100" name="TipoE" value="" required>
                 <option value="">Selecciona el tipo</option>
                 <option value="">PC</option>
                 <option value="">Laptop</option>
@@ -80,25 +83,25 @@
             </div>
             <div class="col-md-3 mb-4">
               <label for="Marca">Marca</label>
-              <input id="Marca" class="form-control" type="text" name="marca" placeholder="Marca" required>
+              <input id="Marca" class="form-control" type="text" name="marca" placeholder="Marca" value="" required>
             </div>
             <div class="col-md-3 mb-4">
               <label for="NumSerie">No. Serie</label>
-              <input id="NumSerie" class="form-control" type="text" name="numSerie" placeholder="No. Serie" required>
+              <input id="NumSerie" class="form-control" type="text" name="numSerie" placeholder="No. Serie" value="" required>
             </div>
             <div class="col-md-3 mb-4">
               <label for="NumInventario">No. Inventario</label>
-              <input id="NumInventario" class="form-control" type="text" name="numInventario" placeholder="No. Inventario">
+              <input id="NumInventario" class="form-control" type="text" name="numInventario" placeholder="No. Inventario" value="">
             </div>
           </div>
           <div class="row">
             <div class="col-md-4 mb-4">
               <label for="MACAddress">MAC Address</label>
-              <input id="MACAddress" class="form-control" type="text" name="mac" placeholder="FF-FF-FF-FF-FF-FF">
+              <input id="MACAddress" class="form-control" type="text" name="mac" placeholder="FF-FF-FF-FF-FF-FF" value="">
             </div>
             <div class="col-md-2 mb-4">
               <label for="HOST">HOST</label>
-              <input id="HOST" class="form-control" type="text" name="host" placeholder="HOST">
+              <input id="HOST" class="form-control" type="text" name="host" placeholder="HOST" value="">
             </div>
             <div class="col-md-2mb-4">
               <label for="E-S">¿Dispositivo E/S?</label><br>

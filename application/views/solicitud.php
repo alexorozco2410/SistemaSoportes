@@ -54,7 +54,7 @@
               <!--<input id="Departamento" class="form-control" type="text" name="Dep" placeholder="Departamento">-->
               <select id="Departamento" class="form-control custom-select d-block w-100" name="Dep" value="" required>
                 <option value="">Selecciona departamento</option>
-                <option value="">Hidraulica</option>
+                <option value="Hidraulica">Hidraulica</option>
               </select>
             </div>
             <div class="col-md-3 mb-4">
@@ -76,9 +76,10 @@
               <label for="TipoEquipo">Equipo</label>
               <select id="TipoEquipo" class="form-control custom-select d-block w-100" name="TipoE" value="" required>
                 <option value="">Selecciona el tipo</option>
-                <option value="">PC</option>
-                <option value="">Laptop</option>
-                <option value="">Celular</option>
+                <option value="PC">PC</option>
+                <option value="Laptop">Laptop</option>
+                <option value="impresora">Impresora</option>
+                <option value="Celular">Celular</option>
               </select>
             </div>
             <div class="col-md-3 mb-4">
@@ -115,12 +116,12 @@
             </div>-->
             <div class="col-md-4">
               <div class="row" style="padding-left:5%;">
-                <label for="fecha_agen">Fecha y hora para atender el soporte</label>
+                <label for="fecha_agen">Fecha y hora para atender el problema</label>
                 <div class="col-md-6" style="padding:0;">
                   <input class="form-control" type="date" id="picker" name="fecha_sol" style="padding:0;">
                 </div>
                 <div class="col-md-5">
-                        <input class="form-control" type="time" name="hora_sol">
+                      <input id="Hora" class="form-control" type="time" name="hora_sol">
                 </div>
               </div>
             </div>

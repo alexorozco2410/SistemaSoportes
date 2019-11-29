@@ -51,7 +51,7 @@ class Login_controller extends CI_Controller {
   public function obtenerEquipos(){
     $this->load->model('login_model');
     $equipos = $this->login_model->buscarEquipo($_SESSION['id_usuario']);
-    //var_dump($equipos);
+  //  var_dump($equipos);
 /*
     for ($i=0; $i < count($equipos); $i++) {
       $newdata = array(
@@ -60,7 +60,7 @@ class Login_controller extends CI_Controller {
     }
     $this->session->set_userdata($newdata);
 */
-    echo json_encode($equipos);
+   echo json_encode($equipos);
   }
 
 }

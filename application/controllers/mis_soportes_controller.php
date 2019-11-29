@@ -16,3 +16,9 @@ class Mis_Soportes_controller extends CI_Controller {
     $this->load->view('final');
 	}
 }
+
+public function obtenerEquipos(){
+  $this->load->model('mis_soportes_model');
+  $misSoportes = $this->mis_soportes_model->buscarMisSoportes($_SESSION['id_usuario']);
+//  echo json_encode($misSoportes);
+}

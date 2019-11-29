@@ -17,16 +17,7 @@
               <th class="atributo-ext atrib-stl">Problema</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Laptop</td>
-              <td>12345678</td>
-              <td>Pendiente</td>
-              <td>12/10/2019</td>
-              <td>11:30</td>
-              <td class="descprob">la computadora no prende lalalalalalalalalalalalaalalall</td>
-            </tr>
+          <tbody id="misSoportes">
             <tr>
               <td>1</td>
               <td>Laptop</td>

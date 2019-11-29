@@ -10,7 +10,6 @@ function login(){
       if(data.status==0){
         alert(data.error)
       }else {
-        buscarEquipos()
         alert('Bienvenido al sistema')
         location.href ="./solicitud";
       }
@@ -21,5 +20,17 @@ function login(){
 function buscarEquipos(){
   $.ajax({
     url: 'login_controller/obtenerEquipos',
+    dataType: 'json',
+    type: 'get',
+    success: function(equipos){
+      //$('#listaEquipos').val(info[0].nombre)
+      for (var i = 0; i < equipos.length; i++) {
+        var botonEquipo = '<button type="button" class="btn list-group-item btn-equipo" onclick="llenarFormulario('
+        + equipos[i].id_equipo + ')">' + (equipos[i].equipo).toUpperCase() + '</button>'
+        $('#listaEquipos').append(botonEquipo);
+      }
+    //  console.log(equipos)
+    //  console.log(equipos.length)
+    }
   });
 }

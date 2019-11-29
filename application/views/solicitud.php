@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="<?php echo CSS; ?>/solicitud.css">
-  <script src="<?php echo JS; ?>/buscarEquipos.js">
+  <script src="<?php echo JS; ?>/login.js" onload="buscarEquipos()">
 
   </script>
   <script src="<?php echo JS; ?>/solicitud.js">
@@ -17,14 +17,8 @@
       <div class="row">
         <div class="col-md-12">
           <div class="l-equipos list-group mb-4" id="listaEquipos">
-            <button type="button" class="btn list-group-item btn-equipo" onclick="llenarFormulario(3)"><?php echo $_SESSION['tipo']; ?></button>
             <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
-            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+
           </div>
         </div>
       </div>
@@ -76,10 +70,10 @@
               <label for="TipoEquipo">Equipo</label>
               <select id="TipoEquipo" class="form-control custom-select d-block w-100" name="TipoE" value="" required>
                 <option value="">Selecciona el tipo</option>
-                <option value="PC">PC</option>
-                <option value="Laptop">Laptop</option>
+                <option value="pc">PC</option>
+                <option value="laptop">Laptop</option>
                 <option value="impresora">Impresora</option>
-                <option value="Celular">Celular</option>
+                <option value="celular">Celular</option>
               </select>
             </div>
             <div class="col-md-3 mb-4">
@@ -88,7 +82,7 @@
             </div>
             <div class="col-md-3 mb-4">
               <label for="NumSerie">No. Serie</label>
-              <input id="NumSerie" class="form-control" type="text" name="numSerie" placeholder="No. Serie" value="" required>
+              <input id="NumSerie" class="form-control" type="text" name="numSerie" placeholder="No. Serie" value="">
             </div>
             <div class="col-md-3 mb-4">
               <label for="NumInventario">No. Inventario</label>

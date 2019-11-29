@@ -5,6 +5,7 @@ function llenarFormulario(num){
     type: 'get',
     success: function(info) {
       //console.log(info)
+      vaciarDatos()
       $('#Nombre').val(info[0].nombre)
       $('#ApellidoPat').val(info[0].apellido_paterno)
       $('#ApellidoMat').val(info[0].apellido_materno)
@@ -26,8 +27,21 @@ function llenarFormulario(num){
 function obtenerHora(){
   var hour = (new Date()).getHours();
   var minutes = (new Date()).getMinutes();
-  return hour + ":" + minutes
-    //console.log(hours)
+  minutes += 10
+  if (minutes > 59) {
+    minutes -= 60
+    hour += 1
+  }
+  if (hour > 23) {
+    hour -= 24
+  }
+  if (minutes < 10){
+    return hour + ":0" + minutes
+  }else{
+    return hour + ":" + minutes
+  }
+  //var hours = hour + ":" + minutes
+  //console.log(hours)
 }
 
 function obtenerFecha(){
@@ -36,4 +50,22 @@ function obtenerFecha(){
   var año = (new Date()).getFullYear();
   return año + "-" + mes + "-" + dia
   //console.log(fecha)
+}
+
+function vaciarDatos(){
+  $('#Nombre').val("")
+  $('#ApellidoPat').val("")
+  $('#ApellidoMat').val("")
+  $("#Departamento option[value]").attr("selected", false)
+  $('#Cubiculo').val("")
+  $('#Tel').val("")
+  $('#Ext').val("")
+  $("#TipoEquipo option[value]").attr("selected", false)
+  $('#Marca').val("")
+  $('#NumSerie').val("")
+  $('#NumInventario').val("")
+  $('#MACAddress').val("")
+  $('#Hora').val("")
+  $('#picker').val("")
+  $('#HOST').val("")
 }

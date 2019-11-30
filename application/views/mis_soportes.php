@@ -1,4 +1,7 @@
 <link rel="stylesheet" href="<?php echo CSS; ?>/mis_soportes.css">
+<script src="<?php echo JS; ?>/mis_soportes.js" onload="obtenerMisSoportes()">
+
+</script>
 
 <div class="container-fluid cont-style page-container">
   <div class="row justify-content-center">
@@ -18,15 +21,7 @@
             </tr>
           </thead>
           <tbody id="misSoportes">
-            <tr>
-              <td>1</td>
-              <td>Laptop</td>
-              <td>12345678</td>
-              <td>Pendiente</td>
-              <td>12/10/2019</td>
-              <td>11:30</td>
-              <td class="descprob">la computadora no prende lalalalalalalalalalalalaalalall</td>
-            </tr>
+            
           </tbody>
 
 

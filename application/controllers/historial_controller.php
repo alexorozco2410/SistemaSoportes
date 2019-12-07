@@ -16,5 +16,19 @@ class Historial_controller extends CI_Controller {
     $this->load->view('final');
 	}
 
+  public function todosSoportes(){
 
+  }
+
+  public function soportesTerminados(){
+
+  }
+
+  public function soportesPendientes(){
+
+  }
+
+  public function soportesEnProceso(){
+    
+  }
 }

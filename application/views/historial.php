@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="<?php echo CSS; ?>/mis_soportes.css">
 <link rel="stylesheet" href="<?php echo CSS; ?>/historial.css">
+<scriptsrc="<?php echo JS; ?>/historial.js" onload="paginar()">
+
+</script>
 
 <div class="container-fluid page-container tabh-style">
   <!--Titulo de la pagina-->
@@ -13,10 +16,10 @@
     <div class="col-sm-12 col-md-6">
       <label for="" class="mb-0">
         <div class="btn-group">
-          <button type="button" class="btn btn-primary">Todos</button>
-          <button type="button" class="btn btn-primary">Terminado</button>
-          <button type="button" class="btn btn-primary">Pendiente</button>
-          <button type="button" class="btn btn-primary">En Proceso</button>
+          <button id="botonTodo" type="button" class="btn btn-primary">Todos</button>
+          <button id="botonTerminado" type="button" class="btn btn-primary">Terminado</button>
+          <button id="botonPendiente" type="button" class="btn btn-primary">Pendiente</button>
+          <button id="botonEnProceso" type="button" class="btn btn-primary">En Proceso</button>
         </div>
       </label>
     </div>
@@ -48,136 +51,6 @@
             </tr>
           </thead>
           <tbody>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
-            <tr onclick="location='informacion_soportes'">
-              <td>SP/UC/168/2020-1</td>
-              <td>Laptop</td>
-              <td>xxx. Alexis Orozco</td>
-              <td>r2-30</td>
-              <td>Alexis Orozco</td>
-              <td>10/09/2019</td>
-              <td>10/09/2019</td>
-              <td>Por Asignar</td>
-            </tr>
             <tr onclick="location='informacion_soportes'">
               <td>SP/UC/168/2020-1</td>
               <td>Laptop</td>

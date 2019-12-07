@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="l-equipos list-group mb-4" id="listaEquipos">
-            <button type="button" class="btn list-group-item btn-equipo" onclick="">Equipo x</button>
+            <button type="button" class="btn list-group-item btn-equipo" onclick="vaciarDatos()">QUITAR INFORMACION</button>
 
           </div>
         </div>
@@ -112,10 +112,10 @@
               <div class="row" style="padding-left:5%;">
                 <label for="fecha_agen">Fecha y hora para atender el problema</label>
                 <div class="col-md-6" style="padding:0;">
-                  <input class="form-control" type="date" id="picker" name="fecha_sol" style="padding:0;">
+                  <input class="form-control" type="date" id="picker" value="" name="fecha_sol" style="padding:0;">
                 </div>
                 <div class="col-md-5">
-                      <input id="Hora" class="form-control" type="time" name="hora_sol">
+                      <input id="Hora" class="form-control" value="" type="time" name="hora_sol">
                 </div>
               </div>
             </div>

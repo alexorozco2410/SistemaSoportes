@@ -35,6 +35,9 @@ function obtenerHora(){
   if (hour > 23) {
     hour -= 24
   }
+  if (hour < 10) {
+    hour = "0"+hour
+  }
   if (minutes < 10){
     return hour + ":0" + minutes
   }else{
@@ -46,9 +49,14 @@ function obtenerHora(){
 
 function obtenerFecha(){
   var dia = (new Date()).getDate();
+  if (dia < 10) {
+    dia = "0"+dia
+  }
   var mes = (new Date()).getMonth()+1;
   var año = (new Date()).getFullYear();
   return año + "-" + mes + "-" + dia
+//var fecha= año + "-" + mes + "-" + dia
+//  var fecha = dia + "-" + mes + "-" +año
   //console.log(fecha)
 }
 

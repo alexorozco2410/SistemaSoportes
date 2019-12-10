@@ -8,8 +8,9 @@ class Login_model extends CI_Model {
   }
 
   public function buscarEquipo($usuarioID){
-    $equipo = "select CONCAT(tipo, ' ', marca) as equipo, id_equipo from equipo join usuario on equipo.id_usuario=usuario.id_usuario
-     where usuario.id_usuario='".$usuarioID."'";
+    $equipo = "select CONCAT(tipo, ' ', marca) as equipo, equipo.id_equipo from usuario join historial_resguardo on
+    usuario.id_usuario=historial_resguardo.id_usuario JOIN equipo on equipo.id_equipo=historial_resguardo.id_equipo
+    where usuario.id_usuario='".$usuarioID."'";
     return $this->db->query($equipo)->result();
   }
 

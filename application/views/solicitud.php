@@ -48,7 +48,7 @@
               <!--<input id="Departamento" class="form-control" type="text" name="Dep" placeholder="Departamento">-->
               <select id="Departamento" class="form-control custom-select d-block w-100" name="Dep" value="" required>
                 <option value="">Selecciona departamento</option>
-                <option value="Hidraulica">Hidraulica</option>
+                  <!--<option value="hidraulica">Hidraulica</option>-->
               </select>
             </div>
             <div class="col-md-3 mb-4">

@@ -2,9 +2,13 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Solicitud_model extends CI_Model {
-  public function buscarInfo($equipoID, $usuarioID){
-    $info = "select * from equipo JOIN usuario ON equipo.id_usuario=usuario.id_usuario
-    where equipo.id_equipo = '".$equipoID."' and usuario.id_usuario= '".$usuarioID."' ";
-    return $this->db->query($info)->result();
+  public function buscarInfo($equipoID){
+    $info_equipo = "select * from equipo where equipo.id_equipo = '".$equipoID."' ";
+    return $this->db->query($info_equipo)->result();
+  }
+
+  public function infoUsuario($usuarioID){
+    $info_usuario = "select * from usuario where usuario.id_usuario = '".$usuarioID."'";
+    return $this->db->query($info_usuario)->result();
   }
 }

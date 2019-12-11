@@ -31,6 +31,23 @@ function buscarEquipos(){
       }
     //  console.log(equipos)
     //  console.log(equipos.length)
+    departamentos();
     }
   });
+}
+
+var deptos = ["Construccion", "Geotecnia", "Hidraulica", "Sistemas",
+"Sanitaria", "C. Proyectos", "C. Ing. Civil", "C. Ing. Geomatica",
+"C. Administrativa", "Jefatura", "Topografia", "Geodesia y Catografia",
+"Estructuras"]
+deptos.sort()
+
+function departamentos(){
+  for (var i = 0; i < deptos.length; i++) {
+    var value = deptos[i].toLowerCase()
+    var opcion_dept = '<option value="' + value + '">'
+    + deptos[i] + '</option>'
+    $('#Departamento').append(opcion_dept);
+  }
+
 }

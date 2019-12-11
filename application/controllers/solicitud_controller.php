@@ -22,9 +22,14 @@ class Solicitud_controller extends CI_Controller {
 
   public function informacionEquipo($id_equipo){
     $this->load->model('solicitud_model');
-    $info = $this->solicitud_model->buscarInfo($id_equipo, $_SESSION['id_usuario']);//obtiene toda la informacion del formulario
+    //$info = $this->solicitud_model->buscarInfo($id_equipo, $_SESSION['id_usuario']);//obtiene toda la informacion del formulario
     //var_dump($info);
+    $info_equipo = $this->solicitud_model->buscarInfo($id_equipo);//obtiene toda la informacion del formulario
+    //var_dump($info);
+    $info_usuario = $this->solicitud_model->infoUsuario($_SESSION['id_usuario']);
+    $info = array_merge($info_usuario, $info_equipo);
     echo json_encode($info);
+    //var_dump($info);
   }
 
 }

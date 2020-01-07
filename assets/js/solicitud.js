@@ -6,23 +6,28 @@ function llenarFormulario(num){
     success: function(info) {
       //console.log(info)
       vaciarDatos()
-      $('#Nombre').val(info[0].nombre)
-      $('#ApellidoPat').val(info[0].apellido_paterno.toUpperCase().charAt(0) +
-      info[0].apellido_paterno.substring(1, info[0].apellido_paterno.length()))
-      $('#ApellidoMat').val(info[0].apellido_materno)
+      $('#Nombre').val( pasarMayuscula(info[0].nombre) )
+      $('#ApellidoPat').val( pasarMayuscula(info[0].apellido_paterno) )
+      $('#ApellidoMat').val( pasarMayuscula(info[0].apellido_materno) )
       $("#Departamento option[value='"+ info[0].departamento +"']").attr("selected", true)
-      $('#Cubiculo').val(info[0].cubiculo)
+      $('#Cubiculo').val( pasarMayuscula(info[0].cubiculo) )
       $('#Tel').val(info[0].telefono)
       $('#Ext').val(info[0].ext)
       $("#TipoEquipo option[value='"+ info[1].tipo +"']").attr("selected", true)
       $('#Marca').val((info[1].marca).toUpperCase())
       $('#NumSerie').val(info[1].no_serie)
       $('#NumInventario').val(info[1].no_inventario)
-      $('#MACAddress').val(info[1].mac_address)
+      $('#MACAddress').val(info[1].mac_address.toUpperCase())
       $('#Hora').val(obtenerHora())
       $('#picker').val(obtenerFecha())
     }
   });
+}
+
+function pasarMayuscula(cadena){
+  if (cadena != null) {
+    return cadena.toUpperCase().charAt(0) + cadena.substring(1, cadena.length)
+  }
 }
 
 function obtenerHora(){
@@ -50,15 +55,25 @@ function obtenerHora(){
 
 function obtenerFecha(){
   var dia = (new Date()).getDate();
-  if (dia < 10) {
-    dia = "0"+dia
-  }
+//  if (dia < 10) {
+//    dia = "0"+dia
+//  }
   var mes = (new Date()).getMonth()+1;
   var año = (new Date()).getFullYear();
+
+  dia = formatoFecha(dia)
+  mes = formatoFecha(mes)
+  
   return año + "-" + mes + "-" + dia
 //var fecha= año + "-" + mes + "-" + dia
 //  var fecha = dia + "-" + mes + "-" +año
   //console.log(fecha)
+}
+
+function formatoFecha(valor){
+  if (valor < 10) {
+    return "0"+valor
+  }
 }
 
 function vaciarDatos(){

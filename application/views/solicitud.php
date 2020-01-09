@@ -27,48 +27,48 @@
     <div class="col-md-9 col-sm-9 col-xs-12 ss">
       <div class="col-sol-2">
         <h3 class="header">Solicitud de Soporte</h3>
-        <form class="sol-soporte" action="solicitud_controller.php" method="post">
+        <form class="sol-soporte" id="FormularioEquipo">
           <div class="row">
             <div class="col-md-4 mb-4">
               <label for="Nombre">Nombre</label>
-              <input id="Nombre" class="form-control" type="text" name="nombre" placeholder="Nombre" value="" required>
+              <input id="Nombre" class="form-control" type="text" name="nombre" placeholder="Nombre" required>
             </div>
             <div class="col-md-4 mb-4">
               <label for="ApellidoPat">Appellido paterno</label>
-              <input id="ApellidoPat" class="form-control" type="text" name="ApPat" placeholder="Apellido Paterno" value="" required>
+              <input id="ApellidoPat" class="form-control" type="text" name="ApPat" placeholder="Apellido Paterno"  required>
             </div>
             <div class="col-md-4 mb-4">
               <label for="ApellidoMat">Apellido materno</label>
-              <input id="ApellidoMat" class="form-control" type="text" name="ApMat" placeholder="Apellido Materno" value="">
+              <input id="ApellidoMat" class="form-control" type="text" name="ApMat" placeholder="Apellido Materno" >
             </div>
           </div>
           <div class="row">
             <div class="col-md-4 mb-4">
               <label for="Departamento">Departamento</label>
               <!--<input id="Departamento" class="form-control" type="text" name="Dep" placeholder="Departamento">-->
-              <select id="Departamento" class="form-control custom-select d-block w-100" name="Dep" value="" required>
+              <select id="Departamento" class="form-control custom-select d-block w-100" name="departamento" required>
                 <option value="">Selecciona departamento</option>
-                  <!--<option value="hidraulica">Hidraulica</option>-->
+              <!--<option value="hidraulica">Hidraulica</option>-->
               </select>
             </div>
             <div class="col-md-3 mb-4">
               <label for="Cubiculo">Cubículo</label>
-              <input id="Cubiculo" class="form-control" type="text" name="cubiculo" placeholder="Cubículo" value="">
+              <input id="Cubiculo" class="form-control" type="text" name="cubiculo" placeholder="RX-XX" required>
             </div>
             <div class="col-md-3 mb-4">
               <label for="Tel">Teléfono</label>
-              <input id="Tel" class="form-control" type="tel" name="telefono" placeholder="Teléfono" value="">
+              <input id="Tel" class="form-control" type="tel" name="telefono" placeholder="Teléfono">
             </div>
             <div class="col-md-2 mb-4">
               <label for="Ext">Ext</label>
-              <input id="Ext" class="form-control" type="tel" name="ext" placeholder="Extensión" value="">
+              <input id="Ext" class="form-control" type="tel" name="ext" placeholder="Extensión">
             </div>
           </div>
           <!--Informacion del equipo!-->
           <div class="row">
             <div class="col-md-3 mb-4">
               <label for="TipoEquipo">Equipo</label>
-              <select id="TipoEquipo" class="form-control custom-select d-block w-100" name="TipoE" value="" required>
+              <select id="TipoEquipo" class="form-control custom-select d-block w-100" name="tipoE" required>
                 <option value="">Selecciona el tipo</option>
                 <option value="pc">PC</option>
                 <option value="laptop">Laptop</option>
@@ -78,25 +78,25 @@
             </div>
             <div class="col-md-3 mb-4">
               <label for="Marca">Marca</label>
-              <input id="Marca" class="form-control" type="text" name="marca" placeholder="Marca" value="" required>
+              <input id="Marca" class="form-control" type="text" name="marca" placeholder="Marca">
             </div>
             <div class="col-md-3 mb-4">
               <label for="NumSerie">No. Serie</label>
-              <input id="NumSerie" class="form-control" type="text" name="numSerie" placeholder="No. Serie" value="">
+              <input id="NumSerie" class="form-control" type="text" name="numSerie" placeholder="No. Serie">
             </div>
             <div class="col-md-3 mb-4">
               <label for="NumInventario">No. Inventario</label>
-              <input id="NumInventario" class="form-control" type="text" name="numInventario" placeholder="No. Inventario" value="">
+              <input id="NumInventario" class="form-control" type="text" name="numInventario" placeholder="No. Inventario">
             </div>
           </div>
           <div class="row">
             <div class="col-md-4 mb-4">
               <label for="MACAddress">MAC Address</label>
-              <input id="MACAddress" class="form-control" type="text" name="mac" placeholder="FF-FF-FF-FF-FF-FF" value="">
+              <input id="MACAddress" class="form-control" type="text" name="mac" placeholder="FF-FF-FF-FF-FF-FF">
             </div>
             <div class="col-md-2 mb-4">
               <label for="HOST">HOST</label>
-              <input id="HOST" class="form-control" type="text" name="host" placeholder="HOST" value="">
+              <input id="HOST" class="form-control" type="text" name="host" placeholder="HOST">
             </div>
             <div class="col-md-2mb-4">
               <label for="E-S">¿Dispositivo E/S?</label><br>
@@ -112,10 +112,10 @@
               <div class="row" style="padding-left:5%;">
                 <label for="fecha_agen">Fecha y hora para atender el problema</label>
                 <div class="col-md-6" style="padding:0;">
-                  <input class="form-control" type="date" id="picker" value="" name="fecha_sol" style="padding:0;">
+                  <input class="form-control" type="date" id="picker"  name="fecha" style="padding:0;">
                 </div>
                 <div class="col-md-5">
-                      <input id="Hora" class="form-control" value="" type="time" name="hora_sol">
+                      <input id="Hora" class="form-control" type="time" name="hora">
                 </div>
               </div>
             </div>
@@ -127,7 +127,7 @@
             </div>
           </div>
           <div class="row my-btn-success mb-4">
-            <button name="btn-solicitud" type="submit" class="btn btn-primary bg-success">Solicitar</button>
+            <button type="button" class="btn btn-primary bg-success" onclick="enviarFormulario()">Solicitar</button>
           </div>
         </form>
       </div>

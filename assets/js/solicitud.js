@@ -63,7 +63,7 @@ function obtenerFecha(){
 
   dia = formatoFecha(dia)
   mes = formatoFecha(mes)
-  
+
   return año + "-" + mes + "-" + dia
 //var fecha= año + "-" + mes + "-" + dia
 //  var fecha = dia + "-" + mes + "-" +año
@@ -92,4 +92,21 @@ function vaciarDatos(){
   $('#Hora').val("")
   $('#picker').val("")
   $('#HOST').val("")
+}
+
+function enviarFormulario(){
+  let datos = $('#FormularioEquipo').serialize()
+  $.ajax({
+    url: 'solicitud_controller/recibirDatos',
+    dataType: 'json',
+    type: 'post',
+    data: datos,
+    success: function(data) {
+      if(data.status==0){
+        alert(data.error)
+      }else {
+        location.href ="solicitud";
+      }
+    }
+  });
 }

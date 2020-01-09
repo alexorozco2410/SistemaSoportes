@@ -32,4 +32,54 @@ class Solicitud_controller extends CI_Controller {
     //var_dump($info);
   }
 
+  public function recibirDatos(){
+    //verifica que se eingresen los datos marcados con la etiqueta "name" en el archivo php
+    //por ejemplo name = "nombre"
+    $this->form_validation->set_message('required', 'Es necesario ingresar el campo %s.');
+    $this->form_validation->set_rules('nombre', 'nombre', 'required');
+    $this->form_validation->set_rules('ApPat', 'apellido paterno', 'required');
+    $this->form_validation->set_rules('departamento', 'departamento', 'required');
+    $this->form_validation->set_rules('cubiculo', 'cubiculo', 'required');
+    $this->form_validation->set_rules('tipoE', 'equipo', 'required');
+    $this->form_validation->set_rules('problema', 'problema', 'required');
+
+    if ($this->form_validation->run() == FALSE) {
+      echo json_encode(array('status' => 0, 'error' => 'faltan datos importantes'));
+    }else {
+      $this->load->model('solicitud_model');
+
+      $datos = array(
+        'nombre' => $this->input->post('nombre'),
+        'apPat' => $this->input->post('ApPat'),
+        'apMat' => $this->input->post('ApMat'),
+        'departamento' => $this->input->post('departamento'),
+        'cubiculo' => $this->input->post('cubiculo'),
+        'tel' => $this->input->post('telefono'),
+        'ext' => $this->input->post('ext'),
+        'equipo' => $this->input->post('tipoE'),
+        'marca' => $this->input->post('marca'),
+        'numSerie' => $this->input->post('numSerie'),
+        'numInventario' => $this->input->post('numInventario'),
+        'mac' => $this->input->post('mac'),
+        'host' => $this->input->post('host'),
+        'e-s' => $this->input->post('e-s'),
+        'fecha' => $this->input->post('fecha'),
+        'hora' => $this->input->post('hora'),
+        'problema' => $this->input->post('problema'),
+      );
+    //  $nombre = $this->input->post('nombre');
+    //  $apPat = $this->input->post('ApPat');
+    //  $apMat = $this->input->post('ApMat');
+    //  $departamento = $this->input->post('departamento');
+    //  $cubiculo = $this->input->post('cubiculo');
+      // $tel = $this->input->post('telefono');
+    //  $ext = $this->input->post('ext');
+    //  $equipo = $this->input->post('tipoE');
+
+    $id_usuario = $this->solicitud_model->checarDatos($datos);
+
+      var_dump($datos);
+    }
+  }
+
 }

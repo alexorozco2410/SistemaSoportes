@@ -66,6 +66,7 @@ class Solicitud_controller extends CI_Controller {
         'fecha' => $this->input->post('fecha'),
         'hora' => $this->input->post('hora'),
         'problema' => $this->input->post('problema'),
+        'idEquipo' => $this->input->post('idE'),
       );
     //  $nombre = $this->input->post('nombre');
     //  $apPat = $this->input->post('ApPat');
@@ -75,11 +76,17 @@ class Solicitud_controller extends CI_Controller {
       // $tel = $this->input->post('telefono');
     //  $ext = $this->input->post('ext');
     //  $equipo = $this->input->post('tipoE');
-
-    $id_usuario = $this->solicitud_model->checarDatos($datos);
-
-      var_dump($datos);
+      if ($datos['idEquipo'] != null) {
+          $this->solicitud_model->registrarSolicitud($datos);
+          //echo json_encode(array('status' => 0, 'error' => 'no esta el equipo en registro'));
+      }else{
+        var_dump($datos['mac']);
+        $verificar = $this->solicitud_model->registrarEquipo($datos);
+        echo json_encode(array('status' => 0, 'error' => 'se registro el equipo'));
+        var_dump($verificar);
+      }
     }
+
   }
 
 }

@@ -20,6 +20,7 @@ function llenarFormulario(num){
       $('#MACAddress').val(info[1].mac_address.toUpperCase())
       $('#Hora').val(obtenerHora())
       $('#picker').val(obtenerFecha())
+      $('#idE').val(num)
     }
   });
 }

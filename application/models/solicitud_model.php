@@ -21,11 +21,15 @@ class Solicitud_model extends CI_Model {
 
   public function registrarEquipo($datos){
     $datos_equipo = "insert into equipo(tipo, marca, modelo, no_serie, no_inventario, host,
-    mac_address) values( '".$datos['equipo']."' ,  '".$datos['marca']."' ,
-     '".$datos['numSerie']."' ,  '".$datos['numInventario']."' ,  '".$datos['host']."' ,
-     '".$datos['mac']."' )";
+    mac_address) values( ".$datos['equipo']." ,  ".$datos['marca']." , ".$datos['modelo'].",
+     ".$datos['numSerie']." ,  ".$datos['numInventario']." ,  ".$datos['host']." ,
+     ".$datos['mac']." )";
 
-    $this->db->query($datos_equipo)->result();
+    $this->db->query($datos_equipo);
+  }
+
+  public function registrarSolicitud(){
+
   }
 
 }

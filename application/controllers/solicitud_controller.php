@@ -58,6 +58,7 @@ class Solicitud_controller extends CI_Controller {
         'ext' => $this->input->post('ext'),
         'equipo' => $this->input->post('tipoE'),
         'marca' => $this->input->post('marca'),
+        'modelo' => $this->input->post('modelo'),
         'numSerie' => $this->input->post('numSerie'),
         'numInventario' => $this->input->post('numInventario'),
         'mac' => $this->input->post('mac'),
@@ -68,21 +69,24 @@ class Solicitud_controller extends CI_Controller {
         'problema' => $this->input->post('problema'),
         'idEquipo' => $this->input->post('idE'),
       );
-    //  $nombre = $this->input->post('nombre');
-    //  $apPat = $this->input->post('ApPat');
-    //  $apMat = $this->input->post('ApMat');
-    //  $departamento = $this->input->post('departamento');
-    //  $cubiculo = $this->input->post('cubiculo');
-      // $tel = $this->input->post('telefono');
-    //  $ext = $this->input->post('ext');
-    //  $equipo = $this->input->post('tipoE');
-      if ($datos['idEquipo'] != null) {
+
+      foreach ($datos as $x => $valor) {
+        if ($valor == "") {
+          $datos[$x] = "NULL";
+        }else {
+          $datos[$x] = '\''.$valor.'\'';
+          //var_dump($aux3);
+        }
+      }
+
+      if ($datos['idEquipo'] != "NULL") {
           $this->solicitud_model->registrarSolicitud($datos);
           //echo json_encode(array('status' => 0, 'error' => 'no esta el equipo en registro'));
+          //$datos['idEquipo'] = NULL;
+          //var_dump($datos);
       }else{
-        var_dump($datos['mac']);
+        //var_dump($datos['mac']);
         $verificar = $this->solicitud_model->registrarEquipo($datos);
-        echo json_encode(array('status' => 0, 'error' => 'se registro el equipo'));
         var_dump($verificar);
       }
     }

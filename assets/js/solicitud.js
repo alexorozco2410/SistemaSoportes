@@ -15,6 +15,7 @@ function llenarFormulario(num){
       $('#Ext').val(info[0].ext)
       $("#TipoEquipo option[value='"+ info[1].tipo +"']").attr("selected", true)
       $('#Marca').val((info[1].marca).toUpperCase())
+      $('#Modelo').val((info[1].marca))
       $('#NumSerie').val(info[1].no_serie)
       $('#NumInventario').val(info[1].no_inventario)
       $('#MACAddress').val(info[1].mac_address.toUpperCase())
@@ -87,12 +88,14 @@ function vaciarDatos(){
   $('#Ext').val("")
   $("#TipoEquipo option[value]").attr("selected", false)
   $('#Marca').val("")
+  $('#Modelo').val("")
   $('#NumSerie').val("")
   $('#NumInventario').val("")
   $('#MACAddress').val("")
   $('#Hora').val("")
   $('#picker').val("")
   $('#HOST').val("")
+  $('#idE').val("")
 }
 
 function enviarFormulario(){

@@ -14,8 +14,8 @@ class Solicitud_model extends CI_Model {
 
   public function checarResguardo($datos){
     $id_resguardo = "select historial_resguardo.id_resguardo from historial_resguardo join
-    equipo on equipo.id_equipo=historial_resguardo.id_equipo where equipo.no_serie =
-    '".$datos['numSerie']."' or equipo.no_inventario = '".$datos['numInventario']."' ";
+    equipo on equipo.id_equipo=historial_resguardo.id_equipo where historial_resguardo.id_equipo =
+    '".$datos['idEquipo']."'  ";
     return $this->db->query($id_resguardo)->result();
   }
 
@@ -28,8 +28,8 @@ class Solicitud_model extends CI_Model {
     $this->db->query($datos_equipo);
   }
 
-  public function registrarSolicitud(){
-
+  public function registrarSolicitud($datos, $usuarioID){
+    $datos_solicitud = "insert into "
   }
 
 }

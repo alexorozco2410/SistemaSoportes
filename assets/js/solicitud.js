@@ -75,6 +75,8 @@ function obtenerFecha(){
 function formatoFecha(valor){
   if (valor < 10) {
     return "0"+valor
+  }else {
+    return valor
   }
 }
 

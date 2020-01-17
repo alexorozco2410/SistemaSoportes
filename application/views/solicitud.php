@@ -82,11 +82,11 @@
             </div>
             <div class="col-md-3 mb-4">
               <label for="Marca">Modelo</label>
-              <input id="Modelo" class="form-control" type="text" name="modelo" value="null" placeholder="Modelo">
+              <input id="Modelo" class="form-control" type="text" name="modelo" placeholder="Modelo">
             </div>
             <div class="col-md-2 mb-4">
               <label for="NumSerie">No. Serie</label>
-              <input id="NumSerie" class="form-control" type="text" name="numSerie" value="null" placeholder="Serie">
+              <input id="NumSerie" class="form-control" type="text" name="numSerie" placeholder="Serie">
             </div>
             <div class="col-md-2 mb-4">
               <label for="NumInventario">No. Inventario</label>

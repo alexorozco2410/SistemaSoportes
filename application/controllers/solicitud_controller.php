@@ -80,14 +80,14 @@ class Solicitud_controller extends CI_Controller {
       }
 
       if ($datos['idEquipo'] != "NULL") {
-          $this->solicitud_model->registrarSolicitud($datos, $_SESSION['id_usuario']);
+          $this->solicitud_model->registrarSolicitud($datos);
           //echo json_encode(array('status' => 0, 'error' => 'no esta el equipo en registro'));
           //$datos['idEquipo'] = NULL;
           //var_dump($datos);
       }else{
         //var_dump($datos['mac']);
         $verificar = $this->solicitud_model->registrarEquipo($datos);
-        var_dump($verificar);
+        var_dump($verificar); //MUESTRA NULL ya que solo se insertan los datos a la base
       }
     }
 

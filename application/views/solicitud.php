@@ -2,7 +2,7 @@
   <script src="<?php echo JS; ?>/login.js" onload="buscarEquipos()">
 
   </script>
-  <script src="<?php echo JS; ?>/solicitud.js">
+  <script src="<?php echo JS; ?>/solicitud.js" onload="obtenerSemestre()">
 
   </script>
 <div class="container-fluid">
@@ -135,6 +135,7 @@
           </div>
           <div>
             <input id="idE" class="form-control" type="text" name="idE" style="display:none;">
+            <input id="semestre" class="form-control" type="text" name="semestre" style="display:none;">
           </div>
         </form>
       </div>

@@ -15,13 +15,24 @@ function llenarFormulario(num){
       $('#Ext').val(info[0].ext)
       $("#TipoEquipo option[value='"+ info[1].tipo +"']").attr("selected", true)
       $('#Marca').val((info[1].marca).toUpperCase())
-      $('#Modelo').val((info[1].marca))
+      $('#Modelo').val((info[1].modelo))
       $('#NumSerie').val(info[1].no_serie)
       $('#NumInventario').val(info[1].no_inventario)
-      $('#MACAddress').val(info[1].mac_address.toUpperCase())
+      $('#MACAddress').val( pasarMayuscula(info[1].mac_address))
       $('#Hora').val(obtenerHora())
       $('#picker').val(obtenerFecha())
       $('#idE').val(num)
+    }
+  });
+}
+
+function obtenerSemestre(){
+  $.ajax({
+    url: 'solicitud_controller/buscarSemestre',
+    dataType: 'json',
+    type: 'get',
+    success: function(semestre) {
+      $('#semestre').val(semestre[0].id_semestre)
     }
   });
 }

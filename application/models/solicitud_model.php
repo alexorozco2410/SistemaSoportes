@@ -12,12 +12,12 @@ class Solicitud_model extends CI_Model {
     return $this->db->query($info_usuario)->result();
   }
 
-  public function checarResguardo($datos){
+  /*public function checarResguardo($datos){
     $id_resguardo = "select resguardo.id_resguardo from resguardo join
     equipo on equipo.id_equipo=resguardo.id_equipo where resguardo.id_equipo =
     '".$datos['idEquipo']."'  ";
     return $this->db->query($id_resguardo)->result();
-  }
+  }*/
 
   public function registrarEquipo($datos){
     $datos_equipo = "insert into equipo(tipo, marca, modelo, no_serie, no_inventario, host,
@@ -28,13 +28,15 @@ class Solicitud_model extends CI_Model {
     $this->db->query($datos_equipo);
   }
 
-  public function registrarSolicitud($datos){
-    $semestre = "select MAX(id_semestre) from semestre";
+  public function semestreActual(){
+    $semestre = "select id_semestre from semestre where id_semestre = (select MAX(id_semestre) as semestre from semestre)";
+    return $this->db->query($semestre)->result();
+  }
 
-    $valor_semestre = $this->db->query($semestre)->result();
+  public function registrarSolicitud($datos){
 
     $datos_solicitud = "insert into soportes(id_semestre, id_equipo, problema, fecha_solicitud)
-    values(".$valor_semestre.", ".$datos['id_equipo'].", ".$datos['problema'].", ".$datos['fecha'].")";
+    values(".$datos['idSemestre'].", ".$datos['idEquipo'].", ".$datos['problema'].", ".$datos['fecha'].")";
 
     $this->db->query($datos_solicitud);
   }

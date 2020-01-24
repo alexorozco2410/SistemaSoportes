@@ -32,6 +32,12 @@ class Solicitud_controller extends CI_Controller {
     //var_dump($info);
   }
 
+  public function buscarSemestre(){
+    $this->load->model('solicitud_model');
+    $info_semestre = $this->solicitud_model->semestreActual();
+    echo json_encode($info_semestre);
+  }
+
   public function recibirDatos(){
     //verifica que se eingresen los datos marcados con la etiqueta "name" en el archivo php
     //por ejemplo name = "nombre"
@@ -68,6 +74,7 @@ class Solicitud_controller extends CI_Controller {
         'hora' => $this->input->post('hora'),
         'problema' => $this->input->post('problema'),
         'idEquipo' => $this->input->post('idE'),
+        'idSemestre' => $this->input->post('semestre'),
       );
 
       foreach ($datos as $x => $valor) {

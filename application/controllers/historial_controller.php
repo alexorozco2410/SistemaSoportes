@@ -16,26 +16,27 @@ class Historial_controller extends CI_Controller {
     $this->load->view('final');
 	}
 
-  public function buscarTodosSoportes(){
+  public function buscarTodosSoportes($numero){
+    switch ($numero) {
+      case '1':
+        $estado = '\'%\'';
+        break;
+      case '2':
+        $estado = '\'Terminado\'';
+        break;
+      case '3':
+        $estado = '\'Pendiente\'';
+        break;
+      case '4':
+        $estado = '\'En proceso\'';
+        break;
+      default:
+        $estado = '\'%\'';
+        break;
+    }
     $this->load->model('historial_model');
-    $todos_soportes = $this->historial_model->buscarTodo();
+    $todos_soportes = $this->historial_model->buscarTodo($estado);
     echo json_encode($todos_soportes);
     //var_dump($todos_soportes);
-  }
-
-  public function soportesTerminados(){
-    $this->load->model('historial_model');
-    $soportes_terminados = $this->historial_model->buscarTerminados();
-    echo json_encode($soportes_terminados);
-  }
-
-  public function soportesPendientes(){
-    $this->load->model('historial_model');
-    $soportes_pendientes = $this->historial_model->buscarPendientes();
-    echo json_encode($soportes_pendientes);
-  }
-
-  public function soportesEnProceso(){
-
   }
 }

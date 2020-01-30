@@ -1,8 +1,7 @@
 <link rel="stylesheet" href="<?php echo CSS; ?>/mis_soportes.css">
 <link rel="stylesheet" href="<?php echo CSS; ?>/historial.css">
 
-<script src="<?php echo JS; ?>/historial.js" onload="todosSoportes()">
-
+<script src="<?php echo JS; ?>/historial.js">
 </script>
 
 <div class="container-fluid page-container tabh-style">
@@ -16,11 +15,11 @@
   <div class="row">
     <div class="col-sm-12 col-md-6">
       <label for="" class="mb-0">
-        <div class="btn-group">
-          <button id="botonTodo" type="button" class="btn btn-primary" onclick="todosSoportes()">Todos</button>
-          <button id="botonTerminado" type="button" class="btn btn-primary">Terminado</button>
-          <button id="botonPendiente" type="button" class="btn btn-primary">Pendiente</button>
-          <button id="botonEnProceso" type="button" class="btn btn-primary">En Proceso</button>
+        <div class="btn-group" id="botonEstatus">
+          <button id="botonTodo" type="button" class="btn btn-primary" onclick="todosSoportes(1)">Todos</button>
+          <button id="botonTerminado" type="button" class="btn btn-primary" onclick="todosSoportes(2)">Terminado</button>
+          <button id="botonPendiente" type="button" class="btn btn-primary" onclick="todosSoportes(3)">Pendiente</button>
+          <button id="botonEnProceso" type="button" class="btn btn-primary" onclick="todosSoportes(4)">En Proceso</button>
         </div>
       </label>
     </div>

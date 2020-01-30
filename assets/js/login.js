@@ -26,7 +26,7 @@ function buscarEquipos(){
       //$('#listaEquipos').val(info[0].nombre)
       for (var i = 0; i < equipos.length; i++) {
         var botonEquipo = '<button type="button" class="btn list-group-item btn-equipo" onclick="llenarFormulario('
-        + equipos[i].id_equipo + ')">' + (equipos[i].equipo).toUpperCase() + '</button>'
+        + equipos[i].id_equipo + ')">' + (equipos[i].equipo).toUpperCase() + '</button>';
         $('#listaEquipos').append(botonEquipo);
       }
     //  console.log(equipos)

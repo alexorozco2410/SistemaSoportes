@@ -51,7 +51,16 @@
             </tr>
           </thead>
           <tbody id="historial">
-
+              <tr class="atr-hist" onclick="mis_soportes">
+                  <td class="atr-lg">Folio</td>
+                  <td class="atr-s">Equipo</td>
+                  <td class="atr-lg">Usuario</td>
+                  <td class="atr-s">Cubículo/Salón</td>
+                  <td class="atr-lg">Integrante UC</td>
+                  <td class="atr-s">Fecha Inicio</td>
+                  <td class="atr-s">Fecha Final</td>
+                  <td class="atr-m">Avance</td>
+              </tr>
           </tbody>
         </table>
       </div>

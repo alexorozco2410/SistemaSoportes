@@ -15,8 +15,6 @@ function todosSoportes(numero){
         }
 
         tabla = tabla + '<tr' + ' ' + clase + '>'
-        + '<li>'
-        +   '<a href="mis_soportes">'
                       +  '<td>' + todosSoportes[i].folio + '</td>'
                       +  '<td>' + todosSoportes[i].tipo + '</td>'
                       +  '<td>' + todosSoportes[i].nombre + ' '
@@ -26,8 +24,6 @@ function todosSoportes(numero){
                       +  '<td>' + todosSoportes[i].fecha_inicio + '</td>'
                       +  '<td>' + todosSoportes[i].fecha_fin + '</td>'
                       +  '<td>' + todosSoportes[i].estatus + '</td>'
-                      + '</a>'
-                      + '</li>'
                       + '</tr>'
       }
       tabla = tabla + '<tbody>'

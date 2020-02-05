@@ -51,7 +51,7 @@
             </tr>
           </thead>
           <tbody id="historial">
-              <tr class="atr-hist" onclick="mis_soportes">
+              <tr class="atr-hist" onclick="detallesSoporte()">
                   <td class="atr-lg">Folio</td>
                   <td class="atr-s">Equipo</td>
                   <td class="atr-lg">Usuario</td>

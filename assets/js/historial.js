@@ -6,15 +6,19 @@ function todosSoportes(numero){
     success: function(todosSoportes){
       var p = "Pendiente"
       var tabla = '<tbody id="historial">'
+      var ids = []
       for (var i = 0; i < todosSoportes.length; i++) {
-
         if (todosSoportes[i].estatus == p) {
           clase = "class=soporte-pendiente"
         }else {
           clase = ""
         }
-
-        tabla = tabla + '<tr' + ' ' + clase + '>'
+        ids[0] = todosSoportes[i].id_solicitud
+        ids[1] = todosSoportes[i].id_equipo
+        ids[2] = todosSoportes[i].id_historial
+        console.log(ids);
+        tabla = tabla + '<tr' + ' ' + clase + ' ' + 'onclick="buscarDetalles('
+        + ids[0] + ',' + ids[1] + ',' + ids[2] + ')"' + '>'
                       +  '<td>' + todosSoportes[i].folio + '</td>'
                       +  '<td>' + todosSoportes[i].tipo + '</td>'
                       +  '<td>' + todosSoportes[i].nombre + ' '
@@ -31,4 +35,30 @@ function todosSoportes(numero){
     }
   });
 
+}
+
+function detallesSoporte(){
+  $.ajax({
+  //  url: 'historial_controller/buscarDetalles',
+    function() {
+        alert('cambiando')
+        location.href ="./info_soporte";
+      }
+  });
+  alert('saliendo del sistema')
+  location.href ="./informacion_soportes";
+}
+
+function buscarDetalles(idSolicitud, idEquipo, idHistorial){
+  //console.log(idHistorial);
+  $.ajax({
+    url: 'info_soportes_controller/Detalles/' + idSolicitud + '/' + idEquipo + '/' + idHistorial,
+    dataType: 'json',
+    type: 'get',
+    success: function(informacion){
+      console.log(informacion);
+      //location.href = "./informacion_soportes";
+    }
+  });
+  detallesSoporte();
 }

@@ -142,23 +142,23 @@
                 </div>
                 <div class="col-3">
                   <p>Responsable del Equipo</p>
-                  <p class="form-control">ING. Alexis Orozco Hernandez</p>
+                  <p class="form-control" id="Nombre">ING. Alexis Orozco Hernandez</p>
                 </div>
                 <div class="col-2">
                   <p>Departamento</p>
-                  <p class="form-control">iMAGENOLOGIA</p>
+                  <p class="form-control" id="Departamento">iMAGENOLOGIA</p>
                 </div>
                 <div class="col-2">
                   <p>Cubículo/Salón</p>
-                  <p class="form-control">R1-06</p>
+                  <p class="form-control" id="Cubiculo">R1-06</p>
                 </div>
                 <div class="col-2">
                   <p>Teléfono</p>
-                  <p class="form-control">5546361540</p>
+                  <p class="form-control" id="Telefono">5546361540</p>
                 </div>
                 <div class="col-1">
                   <p>Ext.</p>
-                  <p class="form-control"></p>
+                  <p class="form-control" id="Ext"></p>
                 </div>
               </div>
               <div class="row">
@@ -166,23 +166,23 @@
                 </div>
                 <div class="col-md-2">
                   <p>Tipo de Equipo</p>
-                  <p class="form-control">Laptop</p>
+                  <p class="form-control" id="TipoEquipo">Laptop</p>
                 </div>
                 <div class="col-md-2">
                   <p>Marca</p>
-                  <p class="form-control">hcbahai</p>
+                  <p class="form-control" id="Marca">hcbahai</p>
                 </div>
                 <div class="col-md-2">
                   <p>Modelo</p>
-                  <p class="form-control">hjhjiy</p>
+                  <p class="form-control" id="Modelo">hjhjiy</p>
                 </div>
                 <div class="col-md-2">
                   <p>No. de Serie</p>
-                  <p class="form-control">54324523554334</p>
+                  <p class="form-control" id="NoSerie">54324523554334</p>
                 </div>
                 <div class="col-md-2">
                   <p>No. de Inventario</p>
-                  <p class="form-control">4326543765474</p>
+                  <p class="form-control" id="NoInventario">4326543765474</p>
                 </div>
                 <div class="col-1">
                 </div>
@@ -190,21 +190,21 @@
               <div class="row">
                 <div class="col-1">
                 </div>
-                <div class="col-md-2">
+              <!--  <div class="col-md-2">
                   <p>Sistema Operativo</p>
                   <p class="form-control">Windows 10</p>
-                </div>
-                <div class="col-md-2">
+                </div>-->
+              <!--  <div class="col-md-2">
                   <p>Procesador</p>
                   <p class="form-control">Intel i7-543636</p>
-                </div>
+                </div>-->
                 <div class="col-md-2">
                   <p>MAC-Addres</p>
-                  <p class="form-control">FF:FF:FF:FF</p>
+                  <p class="form-control" id="Mac">FF:FF:FF:FF</p>
                 </div>
                 <div class="col-md-2">
                   <p>HOST</p>
-                  <p class="form-control"></p>
+                  <p class="form-control" id="Host"></p>
                 </div>
                 <div class="col-1">
                 </div>
@@ -214,7 +214,7 @@
                 </div>
                 <div class="col-md-10">
                   <p>Software instalado en el equipo:</p>
-                  <p class="form-control"></p>
+                  <p class="form-control" id="SWInstalado"></p>
                 </div>
                 <div class="col-1">
                 </div>
@@ -233,37 +233,39 @@
     </div>
   </div>
 <!--Historial de problemas y soluciones dadas-->
+<div id="RegistroHistorial">
+
   <div class="row justify-content-left box-hist card">
     <!--informacion de quien y cuando se hizo el soporte-->
     <div class="card-body">
       <div class="row">
         <div class="col-md-2 col-sm-2 col-xs-12">
           <h6>Integrante(s) UC</h6>
-          <p class="form-control sol-ovfw">Alexis Orozco</p>
+          <p class="form-control sol-ovfw" id="IntegranteUC">Alexis Orozco</p>
         </div>
         <div class="col-md-2 col-sm-2 col-xs-12">
           <h6>Fecha</h6>
-          <p class="form-control">12/09/2020</p>
+          <p class="form-control" id="Fecha">12/09/2020</p>
         </div>
         <!--Problema reportado-->
         <div class="col-md-8 col-sm-8 col-xs-12">
           <h6>Problema reportado</h6>
-          <p class="form-control sol-ovfw">La computadora no prende</p>
+          <p class="form-control sol-ovfw" id="Problema">La computadora no prende</p>
         </div>
         <!--si se instaló algun SW-->
         <div class="col-md-12 col-sm-12 col-sx-12">
           <h6>Software instalado</h6>
-          <p class="form-control sol-ovfw"></p>
+          <p class="form-control sol-ovfw" id="SW"></p>
         </div>
         <!--Equipos a resguardo-->
         <div class="col-md-12 col-sm-12 col-sx-12">
           <h6>Equipos que quedaron a resguardo</h6>
-          <p class="form-control sol-ovfw"></p>
+          <p class="form-control sol-ovfw" id="Resguardo"></p>
         </div>
         <!--Solucion dada-->
         <div class="col-md-12 col-sm-12 col-xs-12">
           <h6>Solución</h6>
-          <p class="form-control reg-sol card-text">
+          <p class="form-control reg-sol card-text" id="Solucion">
             g <br>
             g <br>
             b <br>
@@ -322,5 +324,5 @@
     </div>
   </div>
     <!--termina un registro-->
-
+</div>
 </div>

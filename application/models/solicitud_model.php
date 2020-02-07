@@ -12,13 +12,7 @@ class Solicitud_model extends CI_Model {
     return $this->db->query($info_usuario)->result();
   }
 
-  /*public function checarResguardo($datos){
-    $id_resguardo = "select resguardo.id_resguardo from resguardo join
-    equipo on equipo.id_equipo=resguardo.id_equipo where resguardo.id_equipo =
-    '".$datos['idEquipo']."'  ";
-    return $this->db->query($id_resguardo)->result();
-  }*/
-
+/*
   public function registrarEquipo($datos){
     $datos_equipo = "insert into equipo(tipo, marca, modelo, no_serie, no_inventario, host,
     mac_address) values( ".$datos['equipo']." ,  ".$datos['marca']." , ".$datos['modelo'].",
@@ -26,6 +20,16 @@ class Solicitud_model extends CI_Model {
      ".$datos['mac']." )";
 
     $this->db->query($datos_equipo);
+  }*/
+
+  public function ultimaSolicitud(){
+    $idSolicitud = "select MAX(id_solicitud) as numero from soportes";
+    return $this->db->query($idSolicitud)->result();
+  }
+
+  public function registrarFolio($idSolicitud, $folio){
+    $registrar = "insert into historial(id_solicitud, folio) values(".$idSolicitud.", ".$folio.")";
+    $this->db->query($registrar);
   }
 
   public function semestreActual(){

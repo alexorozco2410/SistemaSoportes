@@ -45,7 +45,7 @@ function detallesSoporte(){
         location.href ="./info_soporte";
       }
   });
-  alert('saliendo del sistema')
+//  alert('buscando')
   location.href ="./informacion_soportes";
 }
 
@@ -57,7 +57,13 @@ function buscarDetalles(idSolicitud, idEquipo, idHistorial){
     type: 'get',
     success: function(informacion){
       console.log(informacion);
-      //location.href = "./informacion_soportes";
+        $('#TipoEquipo').val( pasarMayuscula(informacion[0].tipo) )
+        $('#Marca').val((informacion[0].marca).toUpperCase())
+        $('#Modelo').val((info[0].modelo))
+        $('#NoSerie').val(info[0].no_serie)
+        $('#NoInventario').val(info[0].no_inventario)
+        $('#MAC').val( pasarMayuscula(info[0].mac_address))
+
     }
   });
   detallesSoporte();

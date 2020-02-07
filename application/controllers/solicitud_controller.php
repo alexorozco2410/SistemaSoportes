@@ -97,7 +97,19 @@ class Solicitud_controller extends CI_Controller {
         var_dump($verificar); //MUESTRA NULL ya que solo se insertan los datos a la base
       }
     }
+  }
 
+  public function obtenerUltimaSolicitud(){
+    $this->load->model('solicitud_model');
+    $idSolicitud = $this->solicitud_model->ultimaSolicitud();
+    echo json_encode($idSolicitud);
+  }
+
+  public function registrarFolio($idSolicitud){
+    $this->load->model('solicitud_model');
+    $folio = 'SP/UC/'.$idSolicitud.'/2020-2'
+    //var_dump($folio);
+    $agregar = $this->solicitud_model->registrarFolio($idSolicitud, $folio);
   }
 
 }

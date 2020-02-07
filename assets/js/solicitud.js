@@ -122,8 +122,33 @@ function enviarFormulario(){
       if(data.status==0){
         alert(data.error)
       }else {
-        location.href ="solicitud";
+        location.href ="./mis_soportes";
       }
+    //location.href = "./mis_soportes"
+    }
+  });
+}
+
+function ultimaSolicitud(){
+  $.ajax({
+    url: 'solicitud_controller/obtenerUltimaSolicitud',
+    dataType: 'json',
+    type: 'get',
+    success: function(solicitudFinal){
+      console.log(solicitudFinal);
+      //location.href = "./informacion_soportes";
+    }
+  });
+}
+
+function registrarFolio(idSolicitud){
+  $.ajax({
+    url: 'solicitud_controller/registrarFolio/' +idSolicitud,
+    dataType: 'json',
+    type: 'post',
+    success: function(solicitudFinal){
+      //console.log(solicitudFinal);
+      //location.href = "./informacion_soportes";
     }
   });
 }

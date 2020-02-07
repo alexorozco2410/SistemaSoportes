@@ -28,7 +28,7 @@ class Solicitud_model extends CI_Model {
   }
 
   public function registrarFolio($idSolicitud, $folio){
-    $registrar = "insert into historial(id_solicitud, folio) values(".$idSolicitud.", ".$folio.")";
+    $registrar = "insert into historial(id_solicitud, folio) values('".$idSolicitud."', '".$folio."')";
     $this->db->query($registrar);
   }
 

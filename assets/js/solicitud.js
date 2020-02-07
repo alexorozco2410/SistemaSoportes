@@ -122,8 +122,11 @@ function enviarFormulario(){
       if(data.status==0){
         alert(data.error)
       }else {
-        location.href ="./mis_soportes";
+        ultimaSolicitud();
+        //location.href ="mis_soportes";
       }
+        //location.href ="mis_soportes";
+
     //location.href = "./mis_soportes"
     }
   });
@@ -135,20 +138,22 @@ function ultimaSolicitud(){
     dataType: 'json',
     type: 'get',
     success: function(solicitudFinal){
-      console.log(solicitudFinal);
+      //console.log(solicitudFinal);//hasta aqui si obtiene el id de la ultima solicitud
+      registrarFolio(solicitudFinal[0].numero);
       //location.href = "./informacion_soportes";
     }
   });
 }
 
-function registrarFolio(idSolicitud){
+function registrarFolio(auxiliar){
   $.ajax({
-    url: 'solicitud_controller/registrarFolio/' +idSolicitud,
+    url: 'solicitud_controller/registrarFolio/' + auxiliar,
     dataType: 'json',
     type: 'post',
-    success: function(solicitudFinal){
+    success: function(val){
       //console.log(solicitudFinal);
-      //location.href = "./informacion_soportes";
+    //  console.log("exito");
+      location.href = "mis_soportes";//ya una vez creado el folio y registrado cambia a historial personal
     }
   });
 }

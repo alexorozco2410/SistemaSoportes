@@ -52,6 +52,7 @@ class Solicitud_controller extends CI_Controller {
     if ($this->form_validation->run() == FALSE) {
       echo json_encode(array('status' => 0, 'error' => 'faltan datos importantes'));
     }else {
+      echo json_encode(array('status' => 1));
       $this->load->model('solicitud_model');
 
       $datos = array(
@@ -103,13 +104,16 @@ class Solicitud_controller extends CI_Controller {
     $this->load->model('solicitud_model');
     $idSolicitud = $this->solicitud_model->ultimaSolicitud();
     echo json_encode($idSolicitud);
+    //var_dump($idSolicitud);
   }
 
   public function registrarFolio($idSolicitud){
     $this->load->model('solicitud_model');
-    $folio = 'SP/UC/'.$idSolicitud.'/2020-2'
+    $folio = 'SP/UC/'.$idSolicitud.'/2020-2';
     //var_dump($folio);
     $agregar = $this->solicitud_model->registrarFolio($idSolicitud, $folio);
+    //var_dump($agregar);
+    echo json_encode($agregar);
   }
 
 }

@@ -131,7 +131,7 @@
             </div>
           </div>
           <div class="row my-btn-success mb-4">
-            <button type="button" class="btn btn-primary bg-success" onclick="enviarFormulario()">Solicitar</button>
+            <button type="button" class="btn btn-primary bg-success"  onclick="enviarFormulario()">Solicitar</button>
           </div>
           <div>
             <input id="idE" class="form-control" type="text" name="idE" style="display:none;">

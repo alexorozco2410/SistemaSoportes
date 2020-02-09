@@ -1,5 +1,6 @@
 
   <link rel="stylesheet" href="<?php echo CSS; ?>/nav-style.css">
+
   <script src="<?php echo JS; ?>/logout.js">
 
   </script>

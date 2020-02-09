@@ -34,7 +34,10 @@ class Login_controller extends CI_Controller {
                          $newdata = array(
                         'id_usuario'  => $id_usuario[0]->id_usuario,
                         'usuario'     => $usuario,
-                        'logged_in' => TRUE
+                        'logged_in' => TRUE,
+                        'idBEquipo' => '0',
+                        'idBSolicitud' => '0',
+                        'idBHistorial' => '0'
                                );
 
                           $this->session->set_userdata($newdata);
@@ -61,6 +64,18 @@ class Login_controller extends CI_Controller {
     $this->session->set_userdata($newdata);
 */
    echo json_encode($equipos);
+  }
+
+  public function comprobarInicio(){
+    //var_dump($_SESSION['logged_in']);
+    if ($_SESSION['logged_in']) {
+      $aux = TRUE;
+    }else{
+      $aux = FALSE;  
+    }
+    //var_dump($aux);
+    //return $_SESSION['logged_in'];
+    echo json_encode($aux);
   }
 
 }

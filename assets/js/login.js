@@ -17,6 +17,22 @@ function login(){
   });
 }
 
+function negarAcceso(){
+  $.ajax({
+    url: 'login_controller/comprobarInicio',
+    dataType: 'json',
+    type: 'get',
+    success: function(inicioSesion) {
+      console.log(inicioSesion);
+      if (inicioSesion) {
+      //  location.href="mis_soportes";
+      }else{
+        location.href="./login"
+      }
+    }
+  });
+}
+
 function buscarEquipos(){
   $.ajax({
     url: 'login_controller/obtenerEquipos',

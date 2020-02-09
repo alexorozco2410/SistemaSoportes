@@ -39,4 +39,12 @@ class Historial_controller extends CI_Controller {
     echo json_encode($todos_soportes);
     //var_dump($todos_soportes);
   }
+
+  public function buscarIntegrante($idHistorial){
+    $this->load->model('historial_model');
+    $integrante = $this->historial_model->obtenerIntegrante($idHistorial);//en realidad es el idde la solicitud
+    echo json_encode($integrante);
+    //var_dump($integrante);
+  }
+
 }

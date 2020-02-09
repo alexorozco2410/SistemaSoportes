@@ -9,15 +9,15 @@ class Solicitud_controller extends CI_Controller {
 
 	public function index()
 	{
-    if ($_SESSION['logged_in']) {
+  //  if ($_SESSION['logged_in']) {
       $this->load->view('inicio');
       $this->load->view('nav');
       $this->load->view('Solicitud');
       $this->load->view('footer');
       $this->load->view('final');
-    }else{
-      $this->load->view('Login');
-    }
+  //  }else{
+    //  $this->load->view('Login');
+    //}
 	}
 
   public function informacionEquipo($id_equipo){

@@ -19,6 +19,7 @@ function llenarFormulario(num){
       $('#NumSerie').val(info[1].no_serie)
       $('#NumInventario').val(info[1].no_inventario)
       $('#MACAddress').val( pasarMayuscula(info[1].mac_address))
+      $('#HOST').val(info[1].host)
       $('#Hora').val(obtenerHora())
       $('#picker').val(obtenerFecha())
       $('#idE').val(num)

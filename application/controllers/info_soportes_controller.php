@@ -26,20 +26,21 @@ class Info_Soportes_Controller extends CI_Controller {
     var_dump($_SESSION['idBHistorial']);
   }
 
-  public function Detalles(){
+  public function Detalles($idSolicitud, $idEquipo, $idHistorial){
     $this->load->model('solicitud_model');
-    $Equipo = $this->solicitud_model->buscarInfo($_SESSION['idBEquipo']);
+    $Equipo = $this->solicitud_model->buscarInfo($idEquipo);
     $this->load->model('info_soportes_model');
-    $SoportesAnteriores = $this->info_soportes_model->infoSoporte($_SESSION['idBEquipo']);
-    $responsableBien = $this->info_soportes_model->infoResponsable($_SESSION['idBEquipo']);
-    $fechayhora_sol = $this->info_soportes_model->obtenerFecha($_SESSION['idBSolicitud']);
+    $SoportesAnteriores = $this->info_soportes_model->infoSoporte($idEquipo);
+    $responsableBien = $this->info_soportes_model->infoResponsable($idEquipo);
+    $fechayhora_sol = $this->info_soportes_model->obtenerFecha($idSolicitud);
     //$Solicitud = $this->info_soportes_model
-    //  echo json_encode($Equipo);
+  //  var_dump($_SESSION);
+    //var_dump($Equipo);
     //var_dump($_SESSION['idBSolicitud']);
     //var_dump($_SESSION['idBEquipo']);
     //var_dump($_SESSION['idBHistorial']);
     $info = array_merge($Equipo, $responsableBien, $fechayhora_sol, $SoportesAnteriores);
-  //  var_dump($info);
+    //var_dump($info);
     echo json_encode($info);
   }
 

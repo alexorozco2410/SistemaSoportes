@@ -1,7 +1,7 @@
-var aux= ' ';
+
 
 var gIDS = [];
-var detalles = [];
+//var detalles = [];
 function todosSoportes(numero){
   $.ajax({
     url: 'historial_controller/buscarTodosSoportes/' + numero,
@@ -51,8 +51,11 @@ function guardarID(idSolicitud, idEquipo, idHistorial){
   gIDS[0] = idSolicitud
   gIDS[1] = idEquipo
   gIDS[2] = idHistorial
+//  console.log(gIDS)
 //  detallesSoporte()
-  buscarDetalles();
+  localStorage.setItem('gIDS', gIDS)
+  //buscarDetalles();
+  location.href = "./informacion_soportes";
 }
 
 
@@ -68,7 +71,7 @@ function buscarIntegrante(idHistorial){
     //  return integrante[0].nombre_integrante
     //  aux = + integrante[0].nombreIntegrante;
     //  console.log(aux);
-    return integrante[0];
+    return integrante[0].nombre_integrante;
     }
   //  console.log(aux);
   });
@@ -95,7 +98,7 @@ function buscarDetalles(){
     type: 'post',
     success: function(){
     //  console.log(informacion[0]);
-      location.href = "./informacion_soportes";
+    //  location.href = "./informacion_soportes";
       //var vari = '<p>'+informacion[0].host+'</p>'
     //  document.getElementById("TipoEquipo").innerHTML = var1
       //  $('#TipoEquipo').append(informacion[0].tipo)
@@ -110,16 +113,18 @@ function buscarDetalles(){
     //  return informacion[0];
     }
   });
-  location.href = "./informacion_soportes";
+ //location.href = "./informacion_soportes";
 }
 
 function obtenerHistorico(){
+  var aux = localStorage.getItem('gIDS').split(',')
+  console.log(aux[1])
   $.ajax({
-    url: 'info_soportes_controller/Detalles',
+    url: 'info_soportes_controller/Detalles/'+ aux[0] +'/'+ aux[1] +'/'+aux[2],
     dataType: 'json',
     type: 'get',
     success: function(informacion){
-      //console.log(informacion[0]);
+      //console.log(informacion);
     //  location.href = "./informacion_soportes";
       //var vari = '<p>'+informacion[0].host+'</p>'
     //  document.getElementById("TipoEquipo").innerHTML = var1
@@ -142,10 +147,10 @@ function obtenerHistorico(){
         $('#Telefono').append( informacion[1].telefono)
         $('#Ext').append( informacion[1].ext)
 
-        console.log(informacion)
-        if (informacion.length >= 4) {
+        console.log(informacion[2])
+        if (informacion.length >= 3) {
           var etiqueta = []
-          for (var i = 3; i < informacion.length; i++) {
+          for (var i = 2; i < informacion.length; i++) {
             etiqueta = '<div class="row justify-content-left box-hist card">' +
              '<!--informacion de quien y cuando se hizo el soporte-->' +
               '<div class="card-body">' +

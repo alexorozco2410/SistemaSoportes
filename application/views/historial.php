@@ -27,7 +27,7 @@
 
     </div>
     <div class=" col-2 col-w justify-content-right">
-      <select class="form-control custom-select d-block select-semestre" name="semestre-soportes">
+      <select style="display:none;" class="form-control custom-select d-block select-semestre" name="semestre-soportes">
         <option value="">2020-1</option>
         <option value="">2020-2</option>
       </select>

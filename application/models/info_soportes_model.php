@@ -12,7 +12,7 @@ class Info_soportes_model extends CI_Model {
     integrante_uc.nombre_integrante, ap_pat_integrante, historial.fecha_fin from soportes join historial on
     historial.id_solicitud=soportes.id_solicitud join integrante_uc on integrante_uc.numero_cuenta
     =historial.numero_cuenta join equipo on equipo.id_equipo=soportes.id_equipo
-    where soportes.id_equipo = '".$idEquipo."' and historial.folio is not null";
+    where soportes.id_equipo = '".$idEquipo."' and historial.folio is not null and soportes.estatus = 'Terminado'";
     return $this->db->query($infoS)->result();
   }
 
@@ -54,5 +54,10 @@ class Info_soportes_model extends CI_Model {
   public function soporteTerminado($idSolicitud){
     $t = "update soportes set estatus ='Terminado' where id_solicitud='".$idSolicitud."' ";
     $this->db->query($t);
+  }
+
+  public function cambioEstatus($idSolicitud){
+    $e = "update soportes set estatus = 'En proceso' where id_solicitud = '".$idSolicitud."' ";
+    $this->db->query($e);
   }
 }

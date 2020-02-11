@@ -1,6 +1,7 @@
 
 
 var gIDS = [];
+var nm = []
 //var detalles = [];
 function todosSoportes(numero){
   $.ajax({
@@ -15,12 +16,13 @@ function todosSoportes(numero){
       for (var i = 0; i < todosSoportes.length; i++) {
         if (todosSoportes[i].estatus == p) {
           clase = "class=soporte-pendiente"
-          todosSoportes[i].nombre_integrante = "sin asignar"
+          nm = "sin asignar"
         }else {
           clase = ""
         //  aux = buscarIntegrante(todosSoportes[i].id_historial)
           todosSoportes[i].nombre_integrante = buscarIntegrante(todosSoportes[i].id_solicitud)
           //console.log((todosSoportes[i].nombre_integrante))
+          nm = localStorage.getItem('Name')
         }
         ids[0] = todosSoportes[i].id_solicitud
         ids[1] = todosSoportes[i].id_equipo
@@ -34,7 +36,7 @@ function todosSoportes(numero){
                       +  '<td>' + todosSoportes[i].nombre + ' '
                               + todosSoportes[i].apellido_paterno + '</td>'
                       +  '<td>' + todosSoportes[i].cubiculo + '</td>'
-                      +  '<td>' + todosSoportes[i].nombre_integrante + '</td>'
+                      +  '<td>' + nm + '</td>'
                       +  '<td>' + todosSoportes[i].fecha_inicio + '</td>'
                       +  '<td>' + todosSoportes[i].fecha_fin + '</td>'
                       +  '<td>' + todosSoportes[i].estatus + '</td>'
@@ -71,7 +73,8 @@ function buscarIntegrante(idHistorial){
     //  return integrante[0].nombre_integrante
     //  aux = + integrante[0].nombreIntegrante;
     //  console.log(aux);
-    return integrante[0].nombre_integrante;
+    localStorage.setItem('Name', integrante[0].nombre_integrante)
+    //return integrante[0].nombre_integrante;
     }
   //  console.log(aux);
   });
@@ -150,15 +153,15 @@ function obtenerHistorico(){
         console.log(informacion[2])
         if (informacion.length >= 3) {
           var etiqueta = []
-          for (var i = 2; i < informacion.length; i++) {
+          for (var i = 3; i < informacion.length; i++) {
             etiqueta = '<div class="row justify-content-left box-hist card">' +
              '<!--informacion de quien y cuando se hizo el soporte-->' +
               '<div class="card-body">' +
                 '<div class="row">' +
                   '<div class="col-md-2 col-sm-2 col-xs-12">' +
                     '<h6>Integrante(s) UC</h6>' +
-                    '<p class="form-control sol-ovfw" id="IntegranteUC">'+
-                    informacion[i].nombre_integrante + ' ' + informacion[i].ap_pat_integrante +'</p>' +
+                    '<p class="form-control sol-ovfw" id="IntegranteUC">'
+                    +informacion[i].nombre_integrante + ' ' + informacion[i].ap_pat_integrante +'</p>' +
                   '</div>'+
                   '<div class="col-md-2 col-sm-2 col-xs-12">'+
                     '<h6>Fecha</h6>'+

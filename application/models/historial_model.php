@@ -9,7 +9,7 @@ class historial_model extends CI_Model {
     soportes.id_solicitud =
     historial.id_solicitud join equipo on equipo.id_equipo = soportes.id_equipo join resguardo on
     resguardo.id_equipo = equipo.id_equipo join usuario on usuario.id_usuario = resguardo.id_equipo
-    where soportes.estatus like ".$estado."";
+    where soportes.estatus like ".$estado." and folio is not null";
     return $this->db->query($historial)->result();
   }
 

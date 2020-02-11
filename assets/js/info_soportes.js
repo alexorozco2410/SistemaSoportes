@@ -22,8 +22,9 @@ function buscarTodosIntegrantes(){
 }
 
 function problemaReportado(){
+  var aux = localStorage.getItem('gIDS').split(',')
   $.ajax({
-    url: 'info_soportes_controller/buscarProblemaReportado',
+    url: 'info_soportes_controller/buscarProblemaReportado/'+aux[0],
     dataType: 'json',
     type: 'get',
     success: function(problema) {
@@ -40,8 +41,9 @@ function agregarNC(numCuenta){
 
 function AsignarIntegrante(){
   let datos = $('#AsignarIUC').serialize();//se toman los datos del formulario con id "login"
+  var aux = localStorage.getItem('gIDS').split(',')
   $.ajax({
-    url: 'info_soportes_controller/asignarIntegrante',
+    url: 'info_soportes_controller/asignarIntegrante/'+ aux[0],
     dataType: 'json',
     type: 'post',
     data: datos,
@@ -53,8 +55,9 @@ function AsignarIntegrante(){
 }
 
 function IntInvolucrados(){
+  var aux = localStorage.getItem('gIDS').split(',')
   $.ajax({
-    url: 'info_soportes_controller/involucrados',
+    url: 'info_soportes_controller/involucrados/'+aux[0],
     dataType: 'json',
     type: 'get',
     success: function(inv) {
@@ -70,8 +73,9 @@ function IntInvolucrados(){
 
 function TerminarSoporte(){
   let datos = $('#STermino').serialize();//se toman los datos del formulario con id "login"
+  var aux = localStorage.getItem('gIDS').split(',')
   $.ajax({
-    url: 'info_soportes_controller/terminoSoporte',
+    url: 'info_soportes_controller/terminoSoporte/'+ aux[0],
     dataType: 'json',
     type: 'post',
     data: datos,

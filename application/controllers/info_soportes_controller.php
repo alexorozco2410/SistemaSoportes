@@ -51,7 +51,7 @@ class Info_Soportes_Controller extends CI_Controller {
     echo json_encode($integrantes);
   }
 
-  public function asignarIntegrante(){
+  public function asignarIntegrante($idSolicitud){
     $nombre = $this->input->post('IUCElegido');
     $numero_cuenta = $this->input->post('idIntegrante');
     //  $contraseña = $this->input->post('inputPassword');
@@ -59,28 +59,30 @@ class Info_Soportes_Controller extends CI_Controller {
     //  var_dump($numero_cuenta);
     //$integrante = array_merge($nombre, $numero_cuenta);
     $this->load->model('info_soportes_model');
-    $agregarIntegrante = $this->info_soportes_model->AsigIUC($numero_cuenta, $_SESSION['idBSolicitud']);
+    $agregarIntegrante = $this->info_soportes_model->AsigIUC($numero_cuenta, $idSolicitud);
+    $cambiarEstatus = $this->info_soportes_model->cambioEstatus($idSolicitud);
     echo json_encode($nombre);
   }
 
-  public function involucrados(){
+  public function involucrados($idSolicitud){
     $this->load->model('info_soportes_model');
-    $valores = $this->info_soportes_model->obtenerInvolucrados($_SESSION['idBSolicitud']);
+    $valores = $this->info_soportes_model->obtenerInvolucrados($idSolicitud);
     echo json_encode($valores);
     //var_dump($valores);
   }
 
-  public function buscarProblemaReportado(){
+  public function buscarProblemaReportado($idSolicitud){
     $this->load->model('info_soportes_model');
-    $problema = $this->info_soportes_model->obtenerProblema($_SESSION['idBSolicitud']);
+    $problema = $this->info_soportes_model->obtenerProblema($idSolicitud);
+    //var_dump($problema);
     echo json_encode($problema);
   }
 
-  public function terminoSoporte(){
+  public function terminoSoporte($idSolicitud){
     $descripcion = $this->input->post('SolucionSoporte');
     //var_dump($descripcion);
     $this->load->model('info_soportes_model');
-    $terminar = $this->info_soportes_model->soporteTerminado($_SESSION['idBSolicitud']);
+    $terminar = $this->info_soportes_model->soporteTerminado($idSolicitud);
 //    echo json_encode($terminar);
     echo json_encode(array('cambio' => 1));
   }
